@@ -1,0 +1,15 @@
+python-dotenv
+openai
+PyYAML
+scipy
+requests
+pandas
+inflect
+numpy
+matplotlib
+chromadb
+selenium
+undetected-chromedriver
+beautifulsoup4
+requests
+pyautogui

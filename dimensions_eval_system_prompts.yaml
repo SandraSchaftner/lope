@@ -1,0 +1,95 @@
+- |
+  <task_description>
+  You will be provided with two lists of strings.
+  List 1: Extracted Candidates (Output from an LLM).
+  List 2: Gold Standard (Correct Ontology Properties).
+  
+  Your task is to rate the semantic alignment of List 1 against List 2 on a scale from 1 to 5.
+  Respond ONLY with an integer. Include no other text.
+  </task_description>
+  
+  <criteria>
+  1. **Abstraction & Synonymy:** Reward List 1 if it finds the correct property name (or a synonym) for the concepts in List 2.
+  2. **Value Penalty:** Penalize List 1 if it contains specific data values (Instances) instead of abstract properties, even if they are semantically related to the Gold Standard.
+  </criteria>
+  
+  <examples>
+  - **Strong Alignment (Score 5):**
+    List 1 (Extracted): "Study Area"
+    List 2 (Gold): "Location"
+    -> Explanation: Perfect synonym match.
+  
+  - **Weak Alignment (Score 2):**
+    List 1 (Extracted): "Germany"
+    List 2 (Gold): "Location"
+    -> Explanation: List 1 extracts a specific VALUE instead of the PROPERTY. This is poor alignment with the ontology schema.
+    
+  - **No Alignment (Score 1):**
+    List 1 (Extracted): "Neural Network"
+    List 2 (Gold): "Location"
+    -> Explanation: Semantic mismatch.
+  </examples>
+  
+  <scoring_scale>
+  1—Strongly Disaligned: The extracted strings have no semantic relationship to the Gold Standard.
+  2—Disaligned: Semantic relationship exists, but List 1 extracts specific Values (Instances) instead of Properties.
+  3—Neutral: Mixed results. Some properties match, others are values or unrelated.
+  4—Aligned: Good extraction. Most strings in List 1 are valid property names corresponding to List 2.
+  5—Strongly Aligned: Perfect extraction. List 1 contains abstract properties that match the Gold Standard schema synonyms.
+  </scoring_scale>
+- |
+  <task_description>
+  You will be provided with two lists of strings.
+  List 1: Extracted Candidates (Output from an LLM).
+  List 2: Gold Standard (Correct Ontology Properties).
+  
+  Your task is to rate the **semantic deviation** (abstraction error) of List 1 compared to List 2 on a scale from 1 to 5.
+  Respond ONLY with an integer. Include no other text.
+  </task_description>
+  
+  <criteria>
+  - **Deviation Definition:** Deviation occurs if List 1 contains a specific DATA VALUE (Instance) instead of the abstract PROPERTY (Schema) found in List 2.
+  - **Synonyms are NOT Deviation:** If List 1 uses a different word but implies the same abstract category (e.g. "Method" vs. "Approach"), this is NOT a deviation.
+  </criteria>
+  
+  <examples>
+  - **Minimal Deviation (Score 1):**
+    List 1 (Extracted): "Study Area"
+    List 2 (Gold): "Location"
+    -> Explanation: No deviation. "Study Area" is a valid synonym for the property "Location". Both are on the schema level.
+  
+  - **Significant Deviation (Score 5):**
+    List 1 (Extracted): "95% accuracy"
+    List 2 (Gold): "Performance Metric"
+    -> Explanation: High deviation. "95% accuracy" is a specific data VALUE, whereas the target was the abstract PROPERTY.
+    
+  - **Moderate Deviation (Score 3):**
+    List 1 (Extracted): "Python", "Metric"
+    List 2 (Gold): "Programming Language", "Evaluation Metric"
+    -> Explanation: Mixed. "Metric" is a correct property, but "Python" is a specific value (deviation).
+  </examples>
+  
+  <scoring_scale>
+  1—Minimal Deviation (Best): List 1 consists purely of abstract properties that match the abstraction level of List 2.
+  2—Low Deviation: Most items are correct properties.
+  3—Moderate Deviation: List 1 is a mix of abstract properties and specific values.
+  4—Substantial Deviation: List 1 contains mostly specific content values instead of metadata properties.
+  5—Significant Deviation (Worst): List 1 consists largely of raw text slices or specific instances (e.g. "Python", "Germany") instead of the target properties in List 2.
+  </scoring_scale>
+- |
+  <task_description>
+  You will be provided with two lists of strings.
+  List 1: Extracted Candidates.
+  List 2: Gold Standard Properties.
+  
+  Your task is to **count** how many items in List 1 are valid semantic matches for items in List 2.
+  Respond ONLY with an integer. Include no other text.
+  </task_description>
+  
+  <counting_rules>
+  1. **Match Condition:** Count a match if an item in List 1 represents the SAME abstract property concept as an item in List 2 (Synonyms allowed).
+     - Example: List 1 "Method" == List 2 "Methodology" -> MATCH.
+  
+  2. **Exclusion Condition (Value Check):** DO NOT count a match if the item in List 1 is a specific VALUE, even if it fits the category.
+     - Example: List 1 "Python" != List 2 "Programming Language" -> NO MATCH (Abstraction Error).
+  </counting_rules>

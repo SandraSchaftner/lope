@@ -1,0 +1,160 @@
+- |
+  You will be provided with a research problem, your task is to list dimensions that are relevant to find similar papers for the research problem. Respond only in the format of a python list.
+- |
+  You will be provided with a research problem, your task is to list dimensions that are relevant to find similar papers for the research problem. Respond only in the format of a python list. The following are two successfully completed task examples. 
+  Research problem: "Transformer models" Research dimensions: ["model", "date created", "pretraining architecture", "pretraining task", "training corpus", "optimizer", "tokenization", "number of parameters", "license"]
+  Research problem: "Liposomes as drug carriers" Research dimensions: ["Type of nanocarrier", "Nanoparticle preparation method", "Lipid composition", "Drug type", "Particle size"]
+- |
+  You will be provided with a research problem, your task is to list dimensions that are relevant to find similar papers for the research problem. Provide justification why each dimension is relevant for finding similar papers. Think step-by-step. At the end combine all the relevant dimensions in the format of a python list.
+- |
+  You will be provided with a research problem, your task is to list dimensions that are relevant to find similar papers for the research problem. Provide justification why each dimension is relevant for finding similar papers. Think step-by-step. At the end combine all the relevant dimensions in the format of a python list. The following are two successfully completed task examples. 
+  Research problem: "Transformer models" Research dimensions: ["model", "date created", "pretraining architecture", "pretraining task", "training corpus", "optimizer", "tokenization", "number of parameters", "license"]
+  Research problem: "Liposomes as drug carriers" Research dimensions: ["Type of nanocarrier", "Nanoparticle preparation method", "Lipid composition", "Drug type", "Particle size"]
+- |
+  <system_role>
+  You are an Expert Scientific Knowledge Graph Curator. Your task is to structure scientific text by extracting relevant property names (schema) to categorize research papers.
+  </system_role>
+
+  <instructions>
+  1. Extract the PROPERTY NAME (e.g., "Study location", "Methodology"), NOT the specific content or value.
+  2. Abstract specific details into their general category:
+     - If text says "We used Python" -> Output "Programming language"
+     - If text says "Germany" -> Output "Study location"
+     - If text says "accuracy was 95%" -> Output "Evaluation metric"
+  3. Output between 4 and 8 distinct properties.
+  4. Respond ONLY in the format of a python list.
+  </instructions>
+
+  <examples>
+      <example>
+          <input>Mapping of mineral-bound buddingtonite (dominant ammonium) in hydrothermally altered rocks from Nevada</input>
+          <output>["Data used", "research problem", "Analysis", "reference"]</output>
+      </example>
+      <example>
+          <input>Sustainable supply chain</input>
+          <output>["research problem", "Resolution methods", "Uncertainty", "Sustainability factor", "Objectif function"]</output>
+      </example>
+      <example>
+          <input>Persistent Identification</input>
+          <output>["research problem", "Entity type", "provides API", "uses identifier system", "Metadata schema"]</output>
+      </example>
+  </examples>
+
+  <task>
+  Analyze the following research problem and extract the schema properties as a python list.
+  </task>
+
+  <input_text>
+  {RESEARCH_PROBLEM_VARIABLE}
+  </input_text>
+- |
+  <system_role>
+  You are an Expert Scientific Knowledge Graph Curator. Your task is to structure scientific text by extracting relevant property names (schema) to categorize research papers.
+  </system_role>
+
+  <instructions>
+  1. Extract the PROPERTY NAME (e.g., "Study location", "Methodology"), NOT the specific content or value.
+  2. Abstract specific details into their general category:
+     - If text says "We used Python" -> Output "Programming language"
+     - If text says "Germany" -> Output "Study location"
+     - If text says "accuracy was 95%" -> Output "Evaluation metric"
+  3. Output between 4 and 8 distinct properties.
+  4. Respond ONLY in the format of a python list.
+  </instructions>
+
+  <examples>
+      <example>
+          <input>Title: "Quantitative Geochemical Mapping of Ammonium Minerals in the Southern Cedar Mountains, Nevada, Using the Airborne Visible/Infrared Imaging Spectrometer (AVIRIS)", Abstract: "Imaging spectrometer (hyperspectral) data, field spectral measurements, and laboratory analyses were used to quantitatively map the concentration of mineral-bound ammonium (buddingtonite) in hydrothermally altered volcanic rocks in the southern Cedar Mountains, Esmeralda County, Nevada. Mineral-bound ammonium is a product of ion exchange in silicate minerals and has no visible distinguishing characteristics, however, diagnostic infrared spectral features are ideal for identification using both field and airborne/spaceborne spectrometers. Establishment of a laboratory- or field-based geochemical calibration is presently a prerequisite to quantitative mapping. For this study, ammonium content of rock samples was determined by chemical analysis and reflectance spectra were measured on whole-rock samples. A linear relation was found between ammonium concentration and the depth of a 2.12 μm ammonium absorption feature in buddingtonite. An image-map of ammonium concentration in ppm was derived from Airborne Visible/Infrared Imaging Spectrometer (AVIRIS) data by applying the linear calibration to the AVIRIS reflectance-calibrated spectrum at each pixel. Field spectral measurements, made with a PIMA field spectrometer on a 40 m grid, were used to create a ground-truth concentration map that confirmed the AVIRIS results. Field mapping, X-ray diffraction, and petrologic studies performed in conjunction with the AVIRIS analysis show that buddingtonite is the dominant ammonium mineral in the southern Cedar Mountains, that the ammonium is located along northeast-trending basin and range normal faults, and that it is restricted to two of four crystal-rich rhyolitic tuff units of Oligocene age. This study establishes that remote geochemical mapping using imaging spectrometer data is possible, and presents a methodology that could be extended to quantitatively map other minerals that have absorption features in the short-wave infrared."</input>
+          <output>["Data used", "research problem", "Analysis", "reference"]</output>
+      </example>
+      <example>
+          <input>Title: "Design of a pharmaceutical supply chain network under uncertainty considering perishability and substitutability of products", Abstract: "This paper proposes a mathematical model for the network design of a pharmaceutical supply chain. The two objective functions of the presented model seek to minimize the total cost and the maximum unmet demand. We depart from the existing literature by considering products’ shelf-life, substitutability and quantity discount, while addressing uncertainties in costs and demand. In doing so, a novel robust possibilistic optimization approach is introduced and its performance is analyzed. Finally, a case study is provided and its proposed optimal network is discussed."</input>
+          <output>["research problem", "Resolution methods", "Uncertainty", "Sustainability factor", "Objectif function"]</output>
+      </example>
+      <example>
+          <input>Title: "DataCite: Lessons Learned on Persistent Identifiers for Research Data", Abstract: "Data are the infrastructure of science and they serve as the groundwork for scientific pursuits. Data publication has emerged as a game-changing breakthrough in scholarly communication. Data form the outputs of research but also are a gateway to new hypotheses, enabling new scientific insights and driving innovation. And yet stakeholders across the scholarly ecosystem, including practitioners, institutions, and funders of scientific research are increasingly concerned about the lack of sharing and reuse of research data. Across disciplines and countries, researchers, funders, and publishers are pushing for a more effective research environment, minimizing the duplication of work and maximizing the interaction between researchers. Availability, discoverability, and reproducibility of research outputs are key factors to support data reuse and make possible this new environment of highly collaborative research. An interoperable e-infrastructure is imperative in order to develop new platforms and services for to data publication and reuse. DataCite has been working to establish and promote methods to locate, identify and share information about research data. Along with service development, DataCite supports and advocates for the standards behind persistent identifiers (in particular DOIs, Digital Object Identifiers) for data and other research outputs. Persistent identifiers allow different platforms to exchange information consistently and unambiguously and provide a reliable way to track citations and reuse. Because of this, data publication can become a reality from a technical standpoint, but the adoption of data publication and data citation as a practice by researchers is still in its early stages. Since 2009, DataCite has been developing a series of tools and services to foster the adoption of data publication and citation among the research community. Through the years, DataCite has worked in a close collaboration with interdisciplinary partners on these issues and we have gained insight into the development of data publication workflows. This paper describes the types of different actions and the lessons learned by DataCite."</input>
+          <output>["research problem", "Entity type", "provides API", "uses identifier system", "Metadata schema"]</output>
+      </example>
+  </examples>
+
+  <task>
+  Analyze the following research paper (Title/Abstract) and extract the schema properties as a python list.
+  </task>
+
+  <input_text>
+  {TITLE_ABSTRACT_VARIABLE}
+  </input_text>
+- |
+  <system_role>
+  You are an Expert Scientific Knowledge Graph Curator. Your task is to structure scientific text by extracting relevant property names (schema) to categorize research papers.
+  </system_role>
+
+  <instructions>
+  1. Extract the PROPERTY NAME (e.g., "Study location", "Methodology"), NOT the specific content or value.
+  2. Abstract specific details into their general category:
+     - If text says "We used Python" -> Output "Programming language"
+     - If text says "Germany" -> Output "Study location"
+     - If text says "accuracy was 95%" -> Output "Evaluation metric"
+  3. Output between 4 and 8 distinct properties.
+  4. Respond ONLY in valid JSON format with a single key 'properties'.
+  </instructions>
+
+  <examples>
+      <example>
+          <input>Mapping of mineral-bound buddingtonite (dominant ammonium) in hydrothermally altered rocks from Nevada</input>
+          <output>{"properties": ["Data used", "research problem", "Analysis", "reference"]}</output>
+      </example>
+      <example>
+          <input>Sustainable supply chain</input>
+          <output>{"properties": ["research problem", "Resolution methods", "Uncertainty", "Sustainability factor", "Objectif function"]}</output>
+      </example>
+      <example>
+          <input>Persistent Identification</input>
+          <output>{"properties": ["research problem", "Entity type", "provides API", "uses identifier system", "Metadata schema"]}</output>
+      </example>
+  </examples>
+
+  <task>
+  Analyze the following research problem and extract the schema properties as JSON.
+  </task>
+
+  <input_text>
+  {RESEARCH_PROBLEM_VARIABLE}
+  </input_text>
+- |
+  <system_role>
+  You are an Expert Scientific Knowledge Graph Curator. Your task is to structure scientific text by extracting relevant property names (schema) to categorize research papers.
+  </system_role>
+
+  <instructions>
+  1. Extract the PROPERTY NAME (e.g., "Study location", "Methodology"), NOT the specific content or value.
+  2. Abstract specific details into their general category:
+     - If text says "We used Python" -> Output "Programming language"
+     - If text says "Germany" -> Output "Study location"
+     - If text says "accuracy was 95%" -> Output "Evaluation metric"
+  3. Output between 4 and 8 distinct properties.
+  4. Respond ONLY in valid JSON format with a single key 'properties'.
+  </instructions>
+
+  <examples>
+      <example>
+          <input>Title: "Quantitative Geochemical Mapping of Ammonium Minerals in the Southern Cedar Mountains, Nevada, Using the Airborne Visible/Infrared Imaging Spectrometer (AVIRIS)", Abstract: "Imaging spectrometer (hyperspectral) data, field spectral measurements, and laboratory analyses were used to quantitatively map the concentration of mineral-bound ammonium (buddingtonite) in hydrothermally altered volcanic rocks in the southern Cedar Mountains, Esmeralda County, Nevada. Mineral-bound ammonium is a product of ion exchange in silicate minerals and has no visible distinguishing characteristics, however, diagnostic infrared spectral features are ideal for identification using both field and airborne/spaceborne spectrometers. Establishment of a laboratory- or field-based geochemical calibration is presently a prerequisite to quantitative mapping. For this study, ammonium content of rock samples was determined by chemical analysis and reflectance spectra were measured on whole-rock samples. A linear relation was found between ammonium concentration and the depth of a 2.12 μm ammonium absorption feature in buddingtonite. An image-map of ammonium concentration in ppm was derived from Airborne Visible/Infrared Imaging Spectrometer (AVIRIS) data by applying the linear calibration to the AVIRIS reflectance-calibrated spectrum at each pixel. Field spectral measurements, made with a PIMA field spectrometer on a 40 m grid, were used to create a ground-truth concentration map that confirmed the AVIRIS results. Field mapping, X-ray diffraction, and petrologic studies performed in conjunction with the AVIRIS analysis show that buddingtonite is the dominant ammonium mineral in the southern Cedar Mountains, that the ammonium is located along northeast-trending basin and range normal faults, and that it is restricted to two of four crystal-rich rhyolitic tuff units of Oligocene age. This study establishes that remote geochemical mapping using imaging spectrometer data is possible, and presents a methodology that could be extended to quantitatively map other minerals that have absorption features in the short-wave infrared."</input>
+          <output>{"properties": ["Data used", "research problem", "Analysis", "reference"]}</output>
+      </example>
+      <example>
+          <input>Title: "Design of a pharmaceutical supply chain network under uncertainty considering perishability and substitutability of products", Abstract: "This paper proposes a mathematical model for the network design of a pharmaceutical supply chain. The two objective functions of the presented model seek to minimize the total cost and the maximum unmet demand. We depart from the existing literature by considering products’ shelf-life, substitutability and quantity discount, while addressing uncertainties in costs and demand. In doing so, a novel robust possibilistic optimization approach is introduced and its performance is analyzed. Finally, a case study is provided and its proposed optimal network is discussed."</input>
+          <output>{"properties": ["research problem", "Resolution methods", "Uncertainty", "Sustainability factor", "Objectif function"]}</output>
+      </example>
+      <example>
+          <input>Title: "DataCite: Lessons Learned on Persistent Identifiers for Research Data", Abstract: "Data are the infrastructure of science and they serve as the groundwork for scientific pursuits. Data publication has emerged as a game-changing breakthrough in scholarly communication. Data form the outputs of research but also are a gateway to new hypotheses, enabling new scientific insights and driving innovation. And yet stakeholders across the scholarly ecosystem, including practitioners, institutions, and funders of scientific research are increasingly concerned about the lack of sharing and reuse of research data. Across disciplines and countries, researchers, funders, and publishers are pushing for a more effective research environment, minimizing the duplication of work and maximizing the interaction between researchers. Availability, discoverability, and reproducibility of research outputs are key factors to support data reuse and make possible this new environment of highly collaborative research. An interoperable e-infrastructure is imperative in order to develop new platforms and services for to data publication and reuse. DataCite has been working to establish and promote methods to locate, identify and share information about research data. Along with service development, DataCite supports and advocates for the standards behind persistent identifiers (in particular DOIs, Digital Object Identifiers) for data and other research outputs. Persistent identifiers allow different platforms to exchange information consistently and unambiguously and provide a reliable way to track citations and reuse. Because of this, data publication can become a reality from a technical standpoint, but the adoption of data publication and data citation as a practice by researchers is still in its early stages. Since 2009, DataCite has been developing a series of tools and services to foster the adoption of data publication and citation among the research community. Through the years, DataCite has worked in a close collaboration with interdisciplinary partners on these issues and we have gained insight into the development of data publication workflows. This paper describes the types of different actions and the lessons learned by DataCite."</input>
+          <output>{"properties": ["research problem", "Entity type", "provides API", "uses identifier system", "Metadata schema"]}</output>
+      </example>
+  </examples>
+
+  <task>
+  Analyze the following research paper (Title/Abstract) and extract the schema properties as JSON.
+  </task>
+
+  <input_text>
+  {TITLE_ABSTRACT_VARIABLE}
+  </input_text>

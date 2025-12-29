@@ -1,0 +1,45 @@
+[
+
+  {
+    "id": 1,
+    "doi": "10.1007/978-3-319-25010-6_23",
+    "file_name": "978-3-319-25010-6_23"
+  },
+
+  {
+    "id": 2,
+    "doi": "10.1021/acsami.9b01226",
+    "file_name": "dimitrov-et-al-2019-autonomous-molecular-design-then-and-now"
+  },
+
+  {
+    "id": 3,
+    "doi": "10.1021/acs.jpclett.1c02477",
+    "file_name": "karpov-et-al-2021-size-doesn-t-matter"
+  },
+  {
+    "id": 4,
+    "doi": "10.1021/acs.jcim.9b00087",
+    "file_name": "beckner-pfaendtner-2019-fantastic-liquids-and-where-to-find-them"
+  },
+  {
+    "id": 5,
+    "doi": "10.1002/inf2.12167",
+    "file_name": "InfoMat21"
+  },
+  {
+    "id": 6,
+    "doi": "10.1007/978-3-319-25010-6_2",
+    "file_name": "978-3-319-25010-6_2"
+  },
+  {
+    "id": 7,
+    "doi": "10.1109/re.2013.6636709",
+    "file_name": "Requirements_elicitation_Towards_the_unknown_unknowns"
+  },
+  {
+    "id": 8,
+    "doi": "10.1007/978-3-319-19581-0_8",
+    "file_name": "978-3-319-19581-0_8"
+  }
+  ]

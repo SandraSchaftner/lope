@@ -1,0 +1,57 @@
+[
+{
+    "file_name": "978-3-319-25010-6_23",
+    "id": "978-3-319-25010-6_23",
+    "title": "LOD Lab: Experiments at LOD Scale",
+    "abstract": "Semantic Web research is in the business of optimizing algorithms for only a handful of datasets such as DBpedia, BSBM, DBLP and only a few more. This means that current practice does not generally take the true variety of Linked Data into account. With hundreds of thousands of datasets out in the world today the results of Semantic Web evaluations are less generalizable than they should and -this paper argues -can be. This paper describes LOD Lab: a fundamentally different evaluation paradigm that makes algorithmic evaluation against hundreds of thousands of datasets the new norm. LOD Lab is implemented in terms of the existing LOD Laundromat architecture combined with the new open-source programming interface Frank that supports Web-scale evaluations to be run from the commandline. We illustrate the viability of the LOD Lab approach by rerunning experiments from three recent Semantic Web research publications and expect it will contribute to improving the quality and reproducibility of experimental work in the Semantic Web community. We show that simply rerunning existing experiments within this new evaluation paradigm brings up interesting research questions as to how algorithmic performance relates to (structural) properties of the data."
+    },
+
+{
+    "file_name": "dimitrov-et-al-2019-autonomous-molecular-design-then-and-now",
+    "id": "dimitrov-et-al-2019-autonomous-molecular-design-then-and-now",
+    "title": "Autonomous Molecular Design: Then and Now",
+    "abstract": "The success of deep machine learning in processing of large amounts of data, for example, in image or voice recognition and generation, raises the possibilities that these tools can also be applied for solving complex problems in materials science. In this forum article, we focus on molecular design that aims to answer the question on how we can predict and synthesize molecules with tailored physical, chemical, or biological properties. A potential answer to this question could be found by using intelligent systems that integrate physical models and computational machine learning techniques with automated synthesis and characterization tools. Such systems learn through every single experiment in an analogy to a human scientific expert. While the general idea of an autonomous system for molecular synthesis and characterization has been around for a while, its implementations for the materials sciences are sparse. Here we provide an overview of the developments in chemistry automation and the applications of machine learning techniques in the chemical and pharmaceutical industries with a focus on the novel capabilities that deep learning brings in."
+    },
+{
+    "file_name": "karpov-et-al-2021-size-doesn-t-matter",
+    "id": "karpov-et-al-2021-size-doesn-t-matter",
+    "title": "Size Doesn't Matter: Predicting Physico-or Biochemical Properties Based on Dozens of Molecules",
+    "abstract": "The use of machine learning in chemistry has become a common practice. At the same time, despite the success of modern machine learning methods, the lack of data limits their use. Using a transfer learning methodology can help solve this problem. This methodology assumes that a model built on a sufficient amount of data captures general features of the chemical compound structure on which it was trained and that the further reuse of these features on a data set with a lack of data will greatly improve the quality of the new model. In this paper, we develop this approach for small organic molecules, implementing transfer learning with graph convolutional neural networks. The paper shows a significant improvement in the performance of the models for target properties with a lack of data. The effects of the data set composition on the model's quality and the applicability domain of the resulting models are also considered."
+    },
+{
+    "file_name": "beckner-pfaendtner-2019-fantastic-liquids-and-where-to-find-them",
+    "id": "beckner-pfaendtner-2019-fantastic-liquids-and-where-to-find-them",
+    "title": "Fantastic Liquids and Where To Find Them: Optimizations of Discrete Chemical Space",
+    "abstract": "We present a computational adaptive learning and design strategy for ionic liquids. In this approach we show that (1) multiple cycles of chemical search via genetic algorithm (GA), property calculation with molecular dynamics, and property modeling with physiochemical descriptors and neural networks (QSPR/NN) lead to overall lower property prediction error rates compared to the original QSPR/NN models; (2) chemical similarity and kernel density estimation are a proxy for QSPR/NN error; and (3) single QSPR/NN models projected onto two-dimensional property space recreate the experimentally observed Pareto optimum frontier and, combined with the GA, lead to new structures with properties beyond the frontier."
+    },
+
+{
+    "file_name": "InfoMat21",
+    "id": "InfoMat21",
+    "title": "Machine learning in polymer informatics",
+    "abstract": "Polymers have been widely used in energy storage, construction, medicine, aerospace, and so on. However, the complexity of chemical composition and morphology of polymers has brought challenges to their development. Thanks to the integration of machine learning algorithms and large data resources, the data-driven methods have opened up a new road for the development of polymer science and engineering. The emerging polymer informatics attempts to accelerate the performance prediction and process optimization of new polymers by using machine learning models based on reliable data. With the gradual supplement of currently available databases, the emergence of new databases and the continuous improvement of machine learning algorithms, the research paradigm of polymer informatics will be more efficient and widely used. Based on these points, this paper reviews the development trends of machine learning assisted polymer informatics and provides a simple introduction for researchers in materials, artificial intelligence, and other fields."
+    },
+
+{
+    "file_name": "978-3-319-25010-6_2",
+    "id": "978-3-319-25010-6_2",
+    "title": "TR Discover: A Natural Language Interface for Querying and Analyzing Interlinked Datasets",
+    "abstract": "Currently, the dominant technology for providing nontechnical users with access to Linked Data is keyword-based search. This is problematic because keywords are often inadequate as a means for expressing user intent. In addition, while a structured query language can provide convenient access to the information needed by advanced analytics, unstructured keyword-based search cannot meet this extremely common need. This makes it harder than necessary for non-technical users to generate analytics. We address these difficulties by developing a natural language-based system that allows non-technical users to create wellformed questions. Our system, called TR Discover, maps from a fragment of English into an intermediate First Order Logic representation, which is in turn mapped into SPARQL or SQL. The mapping from natural language to logic makes crucial use of a feature-based grammar with full formal semantics. The fragment of English covered by the natural language grammar is domain specific and tuned to the kinds of questions that the system can handle. Because users will not necessarily know what the coverage of the system is, TR Discover offers a novel auto-suggest mechanism that can help users to construct well-formed and useful natural language questions. TR Discover was developed for future use with Thomson Reuters Cortellis, which is an existing product built on top of a linked data system targeting the pharmaceutical domain. Currently, users access it via a keyword-based query interface. We report results and performance measures for TR Discover on Cortellis, and in addition, to demonstrate the portability of the system, on the QALD-4 dataset, which is associated with a public shared task. We show that the system is usable and portable, and report on the relative performance of queries using SQL and SPARQL back ends."
+},
+
+
+{
+    "file_name": "Requirements_elicitation_Towards_the_unknown_unknowns",
+    "id": "Requirements_elicitation_Towards_the_unknown_unknowns",
+    "title": "Requirements Elicitation: Towards the Unknown Unknowns",
+    "abstract": "Abstract\u00c3\u2018Requirements elicitation research is reviewed using a framework categorising the relative \u00c3\u201dknowness\u00c3\u2022 of requirements specification and Common Ground discourse theory. The main contribution of this survey is to review requirements elicitation from the perspective of this framework and propose a road map of research to tackle outstanding elicitation problems involving tacit knowledge. Elicitation techniques (interviews, scenarios, prototypes, etc.) are investigated, followed by representations, models and support tools. The survey results suggest that elicitation techniques appear to be relatively mature, although new areas of creative requirements are emerging. Representations and models are also well established although there is potential for more sophisticated modelling of domain knowledge. While model-checking tools continue to become more elaborate, more growth is apparent in NL tools such as text mining and IR which help to categorize and disambiguate requirements. Social collaboration support is a relatively new area that facilitates categorisation, prioritisation and matching collections of requirements for product line versions. A road map for future requirements elicitation research is proposed investigating the prospects for techniques, models and tools in green-field domains where few solutions exist, contrasted with brown-field domains where collections of requirements and products already exist. The paper concludes with remarks on the possibility of elicitation tackling the most difficult question of \u00c3\u201dunknown unknown\u00c3\u2022 requirements."
+    },
+
+
+{
+    "file_name": "978-3-319-19581-0_8",
+    "id": "978-3-319-19581-0_8",
+    "title": "Applying Semantic Parsing to Question Answering Over Linked Data: Addressing the Lexical Gap",
+    "abstract": "Question answering over linked data has emerged in the past years as an important topic of research in order to provide natural language access to a growing body of linked open data on the Web. In this paper we focus on analyzing the lexical gap that arises as a challenge for any such question answering system. The lexical gap refers to the mismatch between the vocabulary used in a user question and the vocabulary used in the relevant dataset. We implement a semantic parsing approach and evaluate it on the QALD-4 benchmark, showing that the performance of such an approach suffers from training data sparseness. Its performance can, however, be substantially improved if the right lexical knowledge is available. To show this, we model a set of lexical entries by hand to quantify the number of entries that would be needed. Further, we analyze if a state-of-the-art tool for inducing ontology lexica from corpora can derive these lexical entries automatically. We conclude that further research and investments are needed to derive such lexical knowledge automatically or semi-automatically."
+}
+  ]   

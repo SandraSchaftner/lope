@@ -1,0 +1,182 @@
+{
+    "cs-kg": {
+        "semantic_accuracy": {
+            "1_cs-kg": 3,
+            "2_cs-kg": 4,
+            "3_cs-kg": 1,
+            "4_cs-kg": 3,
+            "5_cs-kg": 2,
+            "6_cs-kg": 2,
+            "7_cs-kg": 1,
+            "8_cs-kg": 3,
+            "11_cs-kg": 3
+        },
+        "syntactic_accuracy": {
+            "1_cs-kg": 5,
+            "2_cs-kg": 5,
+            "3_cs-kg": 5,
+            "4_cs-kg": 5,
+            "5_cs-kg": 5,
+            "6_cs-kg": 5,
+            "7_cs-kg": 5,
+            "8_cs-kg": 5,
+            "11_cs-kg": 5
+        },
+        "conciseness": {
+            "1_cs-kg": 1,
+            "2_cs-kg": 4,
+            "3_cs-kg": 1,
+            "4_cs-kg": 3,
+            "5_cs-kg": 4,
+            "6_cs-kg": 2,
+            "7_cs-kg": 4,
+            "8_cs-kg": 2,
+            "11_cs-kg": 2
+        },
+        "completeness": {
+            "1_cs-kg": 2,
+            "2_cs-kg": 1,
+            "3_cs-kg": 2,
+            "4_cs-kg": 1,
+            "5_cs-kg": 1,
+            "6_cs-kg": 3,
+            "7_cs-kg": 1,
+            "8_cs-kg": 2,
+            "11_cs-kg": 3
+        },
+        "consistency": {
+            "1_cs-kg": 2,
+            "2_cs-kg": 4,
+            "3_cs-kg": 2,
+            "4_cs-kg": 4,
+            "5_cs-kg": 4,
+            "6_cs-kg": 4,
+            "7_cs-kg": 4,
+            "8_cs-kg": 4,
+            "11_cs-kg": 3
+        },
+        "interoperability": {
+            "1_cs-kg": 1,
+            "2_cs-kg": 3,
+            "3_cs-kg": 4,
+            "4_cs-kg": 3,
+            "5_cs-kg": 3,
+            "6_cs-kg": 3,
+            "7_cs-kg": 4,
+            "8_cs-kg": 2,
+            "11_cs-kg": 3
+        },
+        "reusability": {
+            "1_cs-kg": 2,
+            "2_cs-kg": 4,
+            "3_cs-kg": 4,
+            "4_cs-kg": 4,
+            "5_cs-kg": 4,
+            "6_cs-kg": 4,
+            "7_cs-kg": 4,
+            "8_cs-kg": 4,
+            "11_cs-kg": 4
+        },
+        "understandability": {
+            "1_cs-kg": 3,
+            "2_cs-kg": 3,
+            "3_cs-kg": 2,
+            "4_cs-kg": 3,
+            "5_cs-kg": 3,
+            "6_cs-kg": 2,
+            "7_cs-kg": 2,
+            "8_cs-kg": 3,
+            "11_cs-kg": 2
+        }
+    },
+    "orkg": {
+        "semantic_accuracy": {
+            "1_orkg": 2,
+            "2_orkg": 2,
+            "3_orkg": 2,
+            "4_orkg": 2,
+            "5_orkg": 2,
+            "6_orkg": 1,
+            "7_orkg": 3,
+            "8_orkg": 1,
+            "11_orkg": 2
+        },
+        "syntactic_accuracy": {
+            "1_orkg": 5,
+            "2_orkg": 5,
+            "3_orkg": 5,
+            "4_orkg": 5,
+            "5_orkg": 5,
+            "6_orkg": 5,
+            "7_orkg": 5,
+            "8_orkg": 5,
+            "11_orkg": 5
+        },
+        "conciseness": {
+            "1_orkg": 2,
+            "2_orkg": 3,
+            "3_orkg": 3,
+            "4_orkg": 3,
+            "5_orkg": 3,
+            "6_orkg": 2,
+            "7_orkg": 2,
+            "8_orkg": 2,
+            "11_orkg": 1
+        },
+        "completeness": {
+            "1_orkg": 5,
+            "2_orkg": 1,
+            "3_orkg": 1,
+            "4_orkg": 1,
+            "5_orkg": 1,
+            "6_orkg": 1,
+            "7_orkg": 5,
+            "8_orkg": 1,
+            "11_orkg": 3
+        },
+        "consistency": {
+            "1_orkg": 1,
+            "2_orkg": 2,
+            "3_orkg": 2,
+            "4_orkg": 2,
+            "5_orkg": 2,
+            "6_orkg": 1,
+            "7_orkg": 1,
+            "8_orkg": 1,
+            "11_orkg": 1
+        },
+        "interoperability": {
+            "1_orkg": 3,
+            "2_orkg": 2,
+            "3_orkg": 2,
+            "4_orkg": 2,
+            "5_orkg": 2,
+            "6_orkg": 2,
+            "7_orkg": 2,
+            "8_orkg": 2,
+            "11_orkg": 1
+        },
+        "reusability": {
+            "1_orkg": 2,
+            "2_orkg": 1,
+            "3_orkg": 1,
+            "4_orkg": 1,
+            "5_orkg": 1,
+            "6_orkg": 1,
+            "7_orkg": 1,
+            "8_orkg": 1,
+            "11_orkg": 1
+        },
+        "understandability": {
+            "1_orkg": 5,
+            "2_orkg": 3,
+            "3_orkg": 3,
+            "4_orkg": 3,
+            "5_orkg": 3,
+            "6_orkg": 4,
+            "7_orkg": 5,
+            "8_orkg": 4,
+            "11_orkg": 4
+        }
+    }
+}

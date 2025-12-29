@@ -1,0 +1,1213 @@
+{
+    "6": {
+        "cs-kg": {
+            "semantic_accuracy": {
+                "statistic": null,
+                "p_value": null,
+                "n_pairs": 8,
+                "median_difference": 0.5,
+                "direction": "neutral",
+                "status": "skipped_insufficient_pairs (non-zero diff < 6)",
+                "error": null,
+                "n_valid_pairs_used": 8
+            },
+            "syntactic_accuracy": {
+                "statistic": null,
+                "p_value": null,
+                "n_pairs": 8,
+                "median_difference": 0.0,
+                "direction": "neutral",
+                "status": "skipped_insufficient_pairs (non-zero diff < 6)",
+                "error": null,
+                "n_valid_pairs_used": 8
+            },
+            "conciseness": {
+                "statistic": 3.5,
+                "p_value": 0.09375,
+                "n_pairs": 8,
+                "median_difference": 1.5,
+                "direction": "LLM > Human",
+                "status": "ok",
+                "error": null,
+                "n_valid_pairs_used": 8
+            },
+            "completeness": {
+                "statistic": null,
+                "p_value": null,
+                "n_pairs": 8,
+                "median_difference": 0.0,
+                "direction": "neutral",
+                "status": "skipped_insufficient_pairs (non-zero diff < 6)",
+                "error": null,
+                "n_valid_pairs_used": 8
+            },
+            "consistency": {
+                "statistic": 10.0,
+                "p_value": 0.453125,
+                "n_pairs": 8,
+                "median_difference": -1.0,
+                "direction": "LLM < Human",
+                "status": "ok",
+                "error": null,
+                "n_valid_pairs_used": 8
+            },
+            "interoperability": {
+                "statistic": null,
+                "p_value": null,
+                "n_pairs": 8,
+                "median_difference": 0.0,
+                "direction": "neutral",
+                "status": "skipped_insufficient_pairs (non-zero diff < 6)",
+                "error": null,
+                "n_valid_pairs_used": 8
+            },
+            "reusability": {
+                "statistic": 0.0,
+                "p_value": 0.015625,
+                "n_pairs": 8,
+                "median_difference": -1.5,
+                "direction": "LLM < Human",
+                "status": "ok",
+                "error": null,
+                "n_valid_pairs_used": 8
+            },
+            "understandability": {
+                "statistic": null,
+                "p_value": null,
+                "n_pairs": 8,
+                "median_difference": -1.0,
+                "direction": "neutral",
+                "status": "skipped_insufficient_pairs (non-zero diff < 6)",
+                "error": null,
+                "n_valid_pairs_used": 8
+            }
+        },
+        "orkg": {
+            "semantic_accuracy": {
+                "statistic": null,
+                "p_value": null,
+                "n_pairs": 8,
+                "median_difference": 0.5,
+                "direction": "neutral",
+                "status": "skipped_insufficient_pairs (non-zero diff < 6)",
+                "error": null,
+                "n_valid_pairs_used": 8
+            },
+            "syntactic_accuracy": {
+                "statistic": null,
+                "p_value": null,
+                "n_pairs": 8,
+                "median_difference": 0.0,
+                "direction": "neutral",
+                "status": "skipped_insufficient_pairs (non-zero diff < 6)",
+                "error": null,
+                "n_valid_pairs_used": 8
+            },
+            "conciseness": {
+                "statistic": 0.0,
+                "p_value": 0.0078125,
+                "n_pairs": 8,
+                "median_difference": 2.0,
+                "direction": "LLM > Human",
+                "status": "ok",
+                "error": null,
+                "n_valid_pairs_used": 8
+            },
+            "completeness": {
+                "statistic": null,
+                "p_value": null,
+                "n_pairs": 8,
+                "median_difference": 0.0,
+                "direction": "neutral",
+                "status": "skipped_insufficient_pairs (non-zero diff < 6)",
+                "error": null,
+                "n_valid_pairs_used": 8
+            },
+            "consistency": {
+                "statistic": 0.0,
+                "p_value": 0.015625,
+                "n_pairs": 8,
+                "median_difference": 2.0,
+                "direction": "LLM > Human",
+                "status": "ok",
+                "error": null,
+                "n_valid_pairs_used": 8
+            },
+            "interoperability": {
+                "statistic": null,
+                "p_value": null,
+                "n_pairs": 8,
+                "median_difference": 0.0,
+                "direction": "neutral",
+                "status": "skipped_insufficient_pairs (non-zero diff < 6)",
+                "error": null,
+                "n_valid_pairs_used": 8
+            },
+            "reusability": {
+                "statistic": 0.0,
+                "p_value": 0.015625,
+                "n_pairs": 8,
+                "median_difference": 1.0,
+                "direction": "LLM > Human",
+                "status": "ok",
+                "error": null,
+                "n_valid_pairs_used": 8
+            },
+            "understandability": {
+                "statistic": null,
+                "p_value": null,
+                "n_pairs": 8,
+                "median_difference": -1.0,
+                "direction": "neutral",
+                "status": "skipped_insufficient_pairs (non-zero diff < 6)",
+                "error": null,
+                "n_valid_pairs_used": 8
+            }
+        },
+        "summary_metrics": {
+            "non_significant_count": 12,
+            "total_valid_tests": 16,
+            "similarity_percentage": 75.0,
+            "avg_abs_median_diff": 1.5,
+            "best_judge_score": 0.6841570937294212
+        }
+    },
+    "5": {
+        "cs-kg": {
+            "semantic_accuracy": {
+                "statistic": 10.0,
+                "p_value": 0.53125,
+                "n_pairs": 8,
+                "median_difference": -0.5,
+                "direction": "LLM < Human",
+                "status": "ok",
+                "error": null,
+                "n_valid_pairs_used": 8
+            },
+            "syntactic_accuracy": {
+                "statistic": null,
+                "p_value": null,
+                "n_pairs": 8,
+                "median_difference": 0.0,
+                "direction": "neutral",
+                "status": "skipped_insufficient_pairs (non-zero diff < 6)",
+                "error": null,
+                "n_valid_pairs_used": 8
+            },
+            "conciseness": {
+                "statistic": 0.0,
+                "p_value": 0.03125,
+                "n_pairs": 8,
+                "median_difference": 2.0,
+                "direction": "LLM > Human",
+                "status": "ok",
+                "error": null,
+                "n_valid_pairs_used": 8
+            },
+            "completeness": {
+                "statistic": null,
+                "p_value": null,
+                "n_pairs": 8,
+                "median_difference": -0.5,
+                "direction": "neutral",
+                "status": "skipped_insufficient_pairs (non-zero diff < 6)",
+                "error": null,
+                "n_valid_pairs_used": 8
+            },
+            "consistency": {
+                "statistic": null,
+                "p_value": null,
+                "n_pairs": 8,
+                "median_difference": 0.0,
+                "direction": "neutral",
+                "status": "skipped_insufficient_pairs (non-zero diff < 6)",
+                "error": null,
+                "n_valid_pairs_used": 8
+            },
+            "interoperability": {
+                "statistic": null,
+                "p_value": null,
+                "n_pairs": 8,
+                "median_difference": 0.0,
+                "direction": "neutral",
+                "status": "skipped_insufficient_pairs (non-zero diff < 6)",
+                "error": null,
+                "n_valid_pairs_used": 8
+            },
+            "reusability": {
+                "statistic": null,
+                "p_value": null,
+                "n_pairs": 8,
+                "median_difference": -1.0,
+                "direction": "neutral",
+                "status": "skipped_insufficient_pairs (non-zero diff < 6)",
+                "error": null,
+                "n_valid_pairs_used": 8
+            },
+            "understandability": {
+                "statistic": null,
+                "p_value": null,
+                "n_pairs": 8,
+                "median_difference": -1.0,
+                "direction": "neutral",
+                "status": "skipped_insufficient_pairs (non-zero diff < 6)",
+                "error": null,
+                "n_valid_pairs_used": 8
+            }
+        },
+        "orkg": {
+            "semantic_accuracy": {
+                "statistic": null,
+                "p_value": null,
+                "n_pairs": 8,
+                "median_difference": 0.0,
+                "direction": "neutral",
+                "status": "skipped_insufficient_pairs (non-zero diff < 6)",
+                "error": null,
+                "n_valid_pairs_used": 8
+            },
+            "syntactic_accuracy": {
+                "statistic": null,
+                "p_value": null,
+                "n_pairs": 8,
+                "median_difference": 0.0,
+                "direction": "neutral",
+                "status": "skipped_insufficient_pairs (non-zero diff < 6)",
+                "error": null,
+                "n_valid_pairs_used": 8
+            },
+            "conciseness": {
+                "statistic": 0.0,
+                "p_value": 0.0078125,
+                "n_pairs": 8,
+                "median_difference": 2.0,
+                "direction": "LLM > Human",
+                "status": "ok",
+                "error": null,
+                "n_valid_pairs_used": 8
+            },
+            "completeness": {
+                "statistic": null,
+                "p_value": null,
+                "n_pairs": 8,
+                "median_difference": 0.0,
+                "direction": "neutral",
+                "status": "skipped_insufficient_pairs (non-zero diff < 6)",
+                "error": null,
+                "n_valid_pairs_used": 8
+            },
+            "consistency": {
+                "statistic": 0.0,
+                "p_value": 0.0078125,
+                "n_pairs": 8,
+                "median_difference": 2.5,
+                "direction": "LLM > Human",
+                "status": "ok",
+                "error": null,
+                "n_valid_pairs_used": 8
+            },
+            "interoperability": {
+                "statistic": null,
+                "p_value": null,
+                "n_pairs": 8,
+                "median_difference": 0.0,
+                "direction": "neutral",
+                "status": "skipped_insufficient_pairs (non-zero diff < 6)",
+                "error": null,
+                "n_valid_pairs_used": 8
+            },
+            "reusability": {
+                "statistic": 0.0,
+                "p_value": 0.015625,
+                "n_pairs": 8,
+                "median_difference": 1.0,
+                "direction": "LLM > Human",
+                "status": "ok",
+                "error": null,
+                "n_valid_pairs_used": 8
+            },
+            "understandability": {
+                "statistic": null,
+                "p_value": null,
+                "n_pairs": 8,
+                "median_difference": -1.0,
+                "direction": "neutral",
+                "status": "skipped_insufficient_pairs (non-zero diff < 6)",
+                "error": null,
+                "n_valid_pairs_used": 8
+            }
+        },
+        "summary_metrics": {
+            "non_significant_count": 12,
+            "total_valid_tests": 16,
+            "similarity_percentage": 75.0,
+            "avg_abs_median_diff": 1.6,
+            "best_judge_score": 0.625
+        }
+    },
+    "2": {
+        "cs-kg": {
+            "semantic_accuracy": {
+                "statistic": null,
+                "p_value": null,
+                "n_pairs": 8,
+                "median_difference": 0.0,
+                "direction": "neutral",
+                "status": "skipped_insufficient_pairs (non-zero diff < 6)",
+                "error": null,
+                "n_valid_pairs_used": 8
+            },
+            "syntactic_accuracy": {
+                "statistic": null,
+                "p_value": null,
+                "n_pairs": 8,
+                "median_difference": 0.0,
+                "direction": "neutral",
+                "status": "skipped_insufficient_pairs (non-zero diff < 6)",
+                "error": null,
+                "n_valid_pairs_used": 8
+            },
+            "conciseness": {
+                "statistic": 0.0,
+                "p_value": 0.03125,
+                "n_pairs": 8,
+                "median_difference": 1.0,
+                "direction": "LLM > Human",
+                "status": "ok",
+                "error": null,
+                "n_valid_pairs_used": 8
+            },
+            "completeness": {
+                "statistic": null,
+                "p_value": null,
+                "n_pairs": 8,
+                "median_difference": 0.0,
+                "direction": "neutral",
+                "status": "skipped_insufficient_pairs (non-zero diff < 6)",
+                "error": null,
+                "n_valid_pairs_used": 8
+            },
+            "consistency": {
+                "statistic": 9.0,
+                "p_value": 0.359375,
+                "n_pairs": 8,
+                "median_difference": -1.0,
+                "direction": "LLM < Human",
+                "status": "ok",
+                "error": null,
+                "n_valid_pairs_used": 8
+            },
+            "interoperability": {
+                "statistic": null,
+                "p_value": null,
+                "n_pairs": 8,
+                "median_difference": -1.0,
+                "direction": "neutral",
+                "status": "skipped_insufficient_pairs (non-zero diff < 6)",
+                "error": null,
+                "n_valid_pairs_used": 8
+            },
+            "reusability": {
+                "statistic": 0.0,
+                "p_value": 0.0078125,
+                "n_pairs": 8,
+                "median_difference": -2.0,
+                "direction": "LLM < Human",
+                "status": "ok",
+                "error": null,
+                "n_valid_pairs_used": 8
+            },
+            "understandability": {
+                "statistic": 0.0,
+                "p_value": 0.0078125,
+                "n_pairs": 8,
+                "median_difference": -1.5,
+                "direction": "LLM < Human",
+                "status": "ok",
+                "error": null,
+                "n_valid_pairs_used": 8
+            }
+        },
+        "orkg": {
+            "semantic_accuracy": {
+                "statistic": null,
+                "p_value": null,
+                "n_pairs": 8,
+                "median_difference": 0.5,
+                "direction": "neutral",
+                "status": "skipped_insufficient_pairs (non-zero diff < 6)",
+                "error": null,
+                "n_valid_pairs_used": 8
+            },
+            "syntactic_accuracy": {
+                "statistic": null,
+                "p_value": null,
+                "n_pairs": 8,
+                "median_difference": 0.0,
+                "direction": "neutral",
+                "status": "skipped_insufficient_pairs (non-zero diff < 6)",
+                "error": null,
+                "n_valid_pairs_used": 8
+            },
+            "conciseness": {
+                "statistic": null,
+                "p_value": null,
+                "n_pairs": 8,
+                "median_difference": 1.0,
+                "direction": "neutral",
+                "status": "skipped_insufficient_pairs (non-zero diff < 6)",
+                "error": null,
+                "n_valid_pairs_used": 8
+            },
+            "completeness": {
+                "statistic": null,
+                "p_value": null,
+                "n_pairs": 8,
+                "median_difference": 0.0,
+                "direction": "neutral",
+                "status": "skipped_insufficient_pairs (non-zero diff < 6)",
+                "error": null,
+                "n_valid_pairs_used": 8
+            },
+            "consistency": {
+                "statistic": null,
+                "p_value": null,
+                "n_pairs": 8,
+                "median_difference": 1.0,
+                "direction": "neutral",
+                "status": "skipped_insufficient_pairs (non-zero diff < 6)",
+                "error": null,
+                "n_valid_pairs_used": 8
+            },
+            "interoperability": {
+                "statistic": null,
+                "p_value": null,
+                "n_pairs": 8,
+                "median_difference": 0.0,
+                "direction": "neutral",
+                "status": "skipped_insufficient_pairs (non-zero diff < 6)",
+                "error": null,
+                "n_valid_pairs_used": 8
+            },
+            "reusability": {
+                "statistic": 4.5,
+                "p_value": 0.0703125,
+                "n_pairs": 8,
+                "median_difference": 1.0,
+                "direction": "LLM > Human",
+                "status": "ok",
+                "error": null,
+                "n_valid_pairs_used": 8
+            },
+            "understandability": {
+                "statistic": 0.0,
+                "p_value": 0.015625,
+                "n_pairs": 8,
+                "median_difference": -2.5,
+                "direction": "LLM < Human",
+                "status": "ok",
+                "error": null,
+                "n_valid_pairs_used": 8
+            }
+        },
+        "summary_metrics": {
+            "non_significant_count": 12,
+            "total_valid_tests": 16,
+            "similarity_percentage": 75.0,
+            "avg_abs_median_diff": 1.5,
+            "best_judge_score": 0.6841570937294212
+        }
+    },
+    "3": {
+        "cs-kg": {
+            "semantic_accuracy": {
+                "statistic": 12.0,
+                "p_value": 0.59375,
+                "n_pairs": 8,
+                "median_difference": 0.5,
+                "direction": "LLM > Human",
+                "status": "ok",
+                "error": null,
+                "n_valid_pairs_used": 8
+            },
+            "syntactic_accuracy": {
+                "statistic": null,
+                "p_value": null,
+                "n_pairs": 8,
+                "median_difference": 0.0,
+                "direction": "neutral",
+                "status": "skipped_insufficient_pairs (non-zero diff < 6)",
+                "error": null,
+                "n_valid_pairs_used": 8
+            },
+            "conciseness": {
+                "statistic": 0.0,
+                "p_value": 0.015625,
+                "n_pairs": 8,
+                "median_difference": 1.0,
+                "direction": "LLM > Human",
+                "status": "ok",
+                "error": null,
+                "n_valid_pairs_used": 8
+            },
+            "completeness": {
+                "statistic": null,
+                "p_value": null,
+                "n_pairs": 8,
+                "median_difference": 0.0,
+                "direction": "neutral",
+                "status": "skipped_insufficient_pairs (non-zero diff < 6)",
+                "error": null,
+                "n_valid_pairs_used": 8
+            },
+            "consistency": {
+                "statistic": 10.0,
+                "p_value": 0.453125,
+                "n_pairs": 8,
+                "median_difference": -1.0,
+                "direction": "LLM < Human",
+                "status": "ok",
+                "error": null,
+                "n_valid_pairs_used": 8
+            },
+            "interoperability": {
+                "statistic": null,
+                "p_value": null,
+                "n_pairs": 8,
+                "median_difference": 0.0,
+                "direction": "neutral",
+                "status": "skipped_insufficient_pairs (non-zero diff < 6)",
+                "error": null,
+                "n_valid_pairs_used": 8
+            },
+            "reusability": {
+                "statistic": 0.0,
+                "p_value": 0.015625,
+                "n_pairs": 8,
+                "median_difference": -1.0,
+                "direction": "LLM < Human",
+                "status": "ok",
+                "error": null,
+                "n_valid_pairs_used": 8
+            },
+            "understandability": {
+                "statistic": 0.0,
+                "p_value": 0.015625,
+                "n_pairs": 8,
+                "median_difference": -1.0,
+                "direction": "LLM < Human",
+                "status": "ok",
+                "error": null,
+                "n_valid_pairs_used": 8
+            }
+        },
+        "orkg": {
+            "semantic_accuracy": {
+                "statistic": 0.0,
+                "p_value": 0.03125,
+                "n_pairs": 8,
+                "median_difference": 1.0,
+                "direction": "LLM > Human",
+                "status": "ok",
+                "error": null,
+                "n_valid_pairs_used": 8
+            },
+            "syntactic_accuracy": {
+                "statistic": null,
+                "p_value": null,
+                "n_pairs": 8,
+                "median_difference": 0.0,
+                "direction": "neutral",
+                "status": "skipped_insufficient_pairs (non-zero diff < 6)",
+                "error": null,
+                "n_valid_pairs_used": 8
+            },
+            "conciseness": {
+                "statistic": 0.0,
+                "p_value": 0.015625,
+                "n_pairs": 8,
+                "median_difference": 1.5,
+                "direction": "LLM > Human",
+                "status": "ok",
+                "error": null,
+                "n_valid_pairs_used": 8
+            },
+            "completeness": {
+                "statistic": null,
+                "p_value": null,
+                "n_pairs": 8,
+                "median_difference": 0.0,
+                "direction": "neutral",
+                "status": "skipped_insufficient_pairs (non-zero diff < 6)",
+                "error": null,
+                "n_valid_pairs_used": 8
+            },
+            "consistency": {
+                "statistic": null,
+                "p_value": null,
+                "n_pairs": 8,
+                "median_difference": 2.0,
+                "direction": "neutral",
+                "status": "skipped_insufficient_pairs (non-zero diff < 6)",
+                "error": null,
+                "n_valid_pairs_used": 8
+            },
+            "interoperability": {
+                "statistic": null,
+                "p_value": null,
+                "n_pairs": 8,
+                "median_difference": 0.5,
+                "direction": "neutral",
+                "status": "skipped_insufficient_pairs (non-zero diff < 6)",
+                "error": null,
+                "n_valid_pairs_used": 8
+            },
+            "reusability": {
+                "statistic": 0.0,
+                "p_value": 0.0078125,
+                "n_pairs": 8,
+                "median_difference": 1.0,
+                "direction": "LLM > Human",
+                "status": "ok",
+                "error": null,
+                "n_valid_pairs_used": 8
+            },
+            "understandability": {
+                "statistic": null,
+                "p_value": null,
+                "n_pairs": 8,
+                "median_difference": 0.0,
+                "direction": "neutral",
+                "status": "skipped_insufficient_pairs (non-zero diff < 6)",
+                "error": null,
+                "n_valid_pairs_used": 8
+            }
+        },
+        "summary_metrics": {
+            "non_significant_count": 10,
+            "total_valid_tests": 16,
+            "similarity_percentage": 62.5,
+            "avg_abs_median_diff": 1.0,
+            "best_judge_score": 0.8118826370088534
+        }
+    },
+    "7": {
+        "cs-kg": {
+            "semantic_accuracy": {
+                "statistic": 4.0,
+                "p_value": 0.125,
+                "n_pairs": 8,
+                "median_difference": 1.0,
+                "direction": "LLM > Human",
+                "status": "ok",
+                "error": null,
+                "n_valid_pairs_used": 8
+            },
+            "syntactic_accuracy": {
+                "statistic": null,
+                "p_value": null,
+                "n_pairs": 8,
+                "median_difference": 0.0,
+                "direction": "neutral",
+                "status": "skipped_insufficient_pairs (non-zero diff < 6)",
+                "error": null,
+                "n_valid_pairs_used": 8
+            },
+            "conciseness": {
+                "statistic": null,
+                "p_value": null,
+                "n_pairs": 8,
+                "median_difference": 1.5,
+                "direction": "neutral",
+                "status": "skipped_insufficient_pairs (non-zero diff < 6)",
+                "error": null,
+                "n_valid_pairs_used": 8
+            },
+            "completeness": {
+                "statistic": null,
+                "p_value": null,
+                "n_pairs": 8,
+                "median_difference": 0.5,
+                "direction": "neutral",
+                "status": "skipped_insufficient_pairs (non-zero diff < 6)",
+                "error": null,
+                "n_valid_pairs_used": 8
+            },
+            "consistency": {
+                "statistic": null,
+                "p_value": null,
+                "n_pairs": 8,
+                "median_difference": 0.0,
+                "direction": "neutral",
+                "status": "skipped_insufficient_pairs (non-zero diff < 6)",
+                "error": null,
+                "n_valid_pairs_used": 8
+            },
+            "interoperability": {
+                "statistic": 0.0,
+                "p_value": 0.03125,
+                "n_pairs": 8,
+                "median_difference": 1.0,
+                "direction": "LLM > Human",
+                "status": "ok",
+                "error": null,
+                "n_valid_pairs_used": 8
+            },
+            "reusability": {
+                "statistic": null,
+                "p_value": null,
+                "n_pairs": 8,
+                "median_difference": 0.0,
+                "direction": "neutral",
+                "status": "skipped_insufficient_pairs (non-zero diff < 6)",
+                "error": null,
+                "n_valid_pairs_used": 8
+            },
+            "understandability": {
+                "statistic": 5.0,
+                "p_value": 0.1875,
+                "n_pairs": 8,
+                "median_difference": -1.0,
+                "direction": "LLM < Human",
+                "status": "ok",
+                "error": null,
+                "n_valid_pairs_used": 8
+            }
+        },
+        "orkg": {
+            "semantic_accuracy": {
+                "statistic": null,
+                "p_value": null,
+                "n_pairs": 8,
+                "median_difference": 0.0,
+                "direction": "neutral",
+                "status": "skipped_insufficient_pairs (non-zero diff < 6)",
+                "error": null,
+                "n_valid_pairs_used": 8
+            },
+            "syntactic_accuracy": {
+                "statistic": null,
+                "p_value": null,
+                "n_pairs": 8,
+                "median_difference": 0.0,
+                "direction": "neutral",
+                "status": "skipped_insufficient_pairs (non-zero diff < 6)",
+                "error": null,
+                "n_valid_pairs_used": 8
+            },
+            "conciseness": {
+                "statistic": 0.0,
+                "p_value": 0.03125,
+                "n_pairs": 8,
+                "median_difference": 1.0,
+                "direction": "LLM > Human",
+                "status": "ok",
+                "error": null,
+                "n_valid_pairs_used": 8
+            },
+            "completeness": {
+                "statistic": null,
+                "p_value": null,
+                "n_pairs": 8,
+                "median_difference": 0.0,
+                "direction": "neutral",
+                "status": "skipped_insufficient_pairs (non-zero diff < 6)",
+                "error": null,
+                "n_valid_pairs_used": 8
+            },
+            "consistency": {
+                "statistic": 0.0,
+                "p_value": 0.015625,
+                "n_pairs": 8,
+                "median_difference": 1.5,
+                "direction": "LLM > Human",
+                "status": "ok",
+                "error": null,
+                "n_valid_pairs_used": 8
+            },
+            "interoperability": {
+                "statistic": null,
+                "p_value": null,
+                "n_pairs": 8,
+                "median_difference": 0.0,
+                "direction": "neutral",
+                "status": "skipped_insufficient_pairs (non-zero diff < 6)",
+                "error": null,
+                "n_valid_pairs_used": 8
+            },
+            "reusability": {
+                "statistic": 0.0,
+                "p_value": 0.0078125,
+                "n_pairs": 8,
+                "median_difference": 1.0,
+                "direction": "LLM > Human",
+                "status": "ok",
+                "error": null,
+                "n_valid_pairs_used": 8
+            },
+            "understandability": {
+                "statistic": 0.0,
+                "p_value": 0.0078125,
+                "n_pairs": 8,
+                "median_difference": -1.0,
+                "direction": "LLM < Human",
+                "status": "ok",
+                "error": null,
+                "n_valid_pairs_used": 8
+            }
+        },
+        "summary_metrics": {
+            "non_significant_count": 11,
+            "total_valid_tests": 16,
+            "similarity_percentage": 68.75,
+            "avg_abs_median_diff": 1.0714285714285714,
+            "best_judge_score": 0.8125
+        }
+    },
+    "4": {
+        "cs-kg": {
+            "semantic_accuracy": {
+                "statistic": 12.0,
+                "p_value": 0.59375,
+                "n_pairs": 8,
+                "median_difference": 0.5,
+                "direction": "LLM > Human",
+                "status": "ok",
+                "error": null,
+                "n_valid_pairs_used": 8
+            },
+            "syntactic_accuracy": {
+                "statistic": null,
+                "p_value": null,
+                "n_pairs": 8,
+                "median_difference": 0.0,
+                "direction": "neutral",
+                "status": "skipped_insufficient_pairs (non-zero diff < 6)",
+                "error": null,
+                "n_valid_pairs_used": 8
+            },
+            "conciseness": {
+                "statistic": null,
+                "p_value": null,
+                "n_pairs": 8,
+                "median_difference": 1.5,
+                "direction": "neutral",
+                "status": "skipped_insufficient_pairs (non-zero diff < 6)",
+                "error": null,
+                "n_valid_pairs_used": 8
+            },
+            "completeness": {
+                "statistic": 15.0,
+                "p_value": 1.0,
+                "n_pairs": 8,
+                "median_difference": 0.5,
+                "direction": "LLM > Human",
+                "status": "ok",
+                "error": null,
+                "n_valid_pairs_used": 8
+            },
+            "consistency": {
+                "statistic": null,
+                "p_value": null,
+                "n_pairs": 8,
+                "median_difference": 0.0,
+                "direction": "neutral",
+                "status": "skipped_insufficient_pairs (non-zero diff < 6)",
+                "error": null,
+                "n_valid_pairs_used": 8
+            },
+            "interoperability": {
+                "statistic": null,
+                "p_value": null,
+                "n_pairs": 8,
+                "median_difference": 0.5,
+                "direction": "neutral",
+                "status": "skipped_insufficient_pairs (non-zero diff < 6)",
+                "error": null,
+                "n_valid_pairs_used": 8
+            },
+            "reusability": {
+                "statistic": null,
+                "p_value": null,
+                "n_pairs": 8,
+                "median_difference": -1.0,
+                "direction": "neutral",
+                "status": "skipped_insufficient_pairs (non-zero diff < 6)",
+                "error": null,
+                "n_valid_pairs_used": 8
+            },
+            "understandability": {
+                "statistic": null,
+                "p_value": null,
+                "n_pairs": 8,
+                "median_difference": -1.0,
+                "direction": "neutral",
+                "status": "skipped_insufficient_pairs (non-zero diff < 6)",
+                "error": null,
+                "n_valid_pairs_used": 8
+            }
+        },
+        "orkg": {
+            "semantic_accuracy": {
+                "statistic": null,
+                "p_value": null,
+                "n_pairs": 8,
+                "median_difference": 0.0,
+                "direction": "neutral",
+                "status": "skipped_insufficient_pairs (non-zero diff < 6)",
+                "error": null,
+                "n_valid_pairs_used": 8
+            },
+            "syntactic_accuracy": {
+                "statistic": null,
+                "p_value": null,
+                "n_pairs": 8,
+                "median_difference": 0.0,
+                "direction": "neutral",
+                "status": "skipped_insufficient_pairs (non-zero diff < 6)",
+                "error": null,
+                "n_valid_pairs_used": 8
+            },
+            "conciseness": {
+                "statistic": null,
+                "p_value": null,
+                "n_pairs": 8,
+                "median_difference": 0.5,
+                "direction": "neutral",
+                "status": "skipped_insufficient_pairs (non-zero diff < 6)",
+                "error": null,
+                "n_valid_pairs_used": 8
+            },
+            "completeness": {
+                "statistic": null,
+                "p_value": null,
+                "n_pairs": 8,
+                "median_difference": 0.0,
+                "direction": "neutral",
+                "status": "skipped_insufficient_pairs (non-zero diff < 6)",
+                "error": null,
+                "n_valid_pairs_used": 8
+            },
+            "consistency": {
+                "statistic": 0.0,
+                "p_value": 0.0078125,
+                "n_pairs": 8,
+                "median_difference": 1.5,
+                "direction": "LLM > Human",
+                "status": "ok",
+                "error": null,
+                "n_valid_pairs_used": 8
+            },
+            "interoperability": {
+                "statistic": null,
+                "p_value": null,
+                "n_pairs": 8,
+                "median_difference": 0.0,
+                "direction": "neutral",
+                "status": "skipped_insufficient_pairs (non-zero diff < 6)",
+                "error": null,
+                "n_valid_pairs_used": 8
+            },
+            "reusability": {
+                "statistic": 0.0,
+                "p_value": 0.015625,
+                "n_pairs": 8,
+                "median_difference": 1.0,
+                "direction": "LLM > Human",
+                "status": "ok",
+                "error": null,
+                "n_valid_pairs_used": 8
+            },
+            "understandability": {
+                "statistic": 0.0,
+                "p_value": 0.0078125,
+                "n_pairs": 8,
+                "median_difference": -2.5,
+                "direction": "LLM < Human",
+                "status": "ok",
+                "error": null,
+                "n_valid_pairs_used": 8
+            }
+        },
+        "summary_metrics": {
+            "non_significant_count": 13,
+            "total_valid_tests": 16,
+            "similarity_percentage": 81.25,
+            "avg_abs_median_diff": 1.2,
+            "best_judge_score": 0.8004545620838517
+        }
+    },
+    "1": {
+        "cs-kg": {
+            "semantic_accuracy": {
+                "statistic": null,
+                "p_value": null,
+                "n_pairs": 8,
+                "median_difference": 0.5,
+                "direction": "neutral",
+                "status": "skipped_insufficient_pairs (non-zero diff < 6)",
+                "error": null,
+                "n_valid_pairs_used": 8
+            },
+            "syntactic_accuracy": {
+                "statistic": null,
+                "p_value": null,
+                "n_pairs": 8,
+                "median_difference": 0.0,
+                "direction": "neutral",
+                "status": "skipped_insufficient_pairs (non-zero diff < 6)",
+                "error": null,
+                "n_valid_pairs_used": 8
+            },
+            "conciseness": {
+                "statistic": 7.0,
+                "p_value": 0.203125,
+                "n_pairs": 8,
+                "median_difference": 1.0,
+                "direction": "LLM > Human",
+                "status": "ok",
+                "error": null,
+                "n_valid_pairs_used": 8
+            },
+            "completeness": {
+                "statistic": null,
+                "p_value": null,
+                "n_pairs": 8,
+                "median_difference": 0.5,
+                "direction": "neutral",
+                "status": "skipped_insufficient_pairs (non-zero diff < 6)",
+                "error": null,
+                "n_valid_pairs_used": 8
+            },
+            "consistency": {
+                "statistic": 8.0,
+                "p_value": 0.234375,
+                "n_pairs": 8,
+                "median_difference": -1.0,
+                "direction": "LLM < Human",
+                "status": "ok",
+                "error": null,
+                "n_valid_pairs_used": 8
+            },
+            "interoperability": {
+                "statistic": null,
+                "p_value": null,
+                "n_pairs": 8,
+                "median_difference": 0.0,
+                "direction": "neutral",
+                "status": "skipped_insufficient_pairs (non-zero diff < 6)",
+                "error": null,
+                "n_valid_pairs_used": 8
+            },
+            "reusability": {
+                "statistic": 0.0,
+                "p_value": 0.015625,
+                "n_pairs": 8,
+                "median_difference": -1.0,
+                "direction": "LLM < Human",
+                "status": "ok",
+                "error": null,
+                "n_valid_pairs_used": 8
+            },
+            "understandability": {
+                "statistic": null,
+                "p_value": null,
+                "n_pairs": 8,
+                "median_difference": -1.0,
+                "direction": "neutral",
+                "status": "skipped_insufficient_pairs (non-zero diff < 6)",
+                "error": null,
+                "n_valid_pairs_used": 8
+            }
+        },
+        "orkg": {
+            "semantic_accuracy": {
+                "statistic": 4.5,
+                "p_value": 0.15625,
+                "n_pairs": 8,
+                "median_difference": 1.0,
+                "direction": "LLM > Human",
+                "status": "ok",
+                "error": null,
+                "n_valid_pairs_used": 8
+            },
+            "syntactic_accuracy": {
+                "statistic": null,
+                "p_value": null,
+                "n_pairs": 8,
+                "median_difference": 0.0,
+                "direction": "neutral",
+                "status": "skipped_insufficient_pairs (non-zero diff < 6)",
+                "error": null,
+                "n_valid_pairs_used": 8
+            },
+            "conciseness": {
+                "statistic": null,
+                "p_value": null,
+                "n_pairs": 8,
+                "median_difference": 0.0,
+                "direction": "neutral",
+                "status": "skipped_insufficient_pairs (non-zero diff < 6)",
+                "error": null,
+                "n_valid_pairs_used": 8
+            },
+            "completeness": {
+                "statistic": null,
+                "p_value": null,
+                "n_pairs": 8,
+                "median_difference": 0.0,
+                "direction": "neutral",
+                "status": "skipped_insufficient_pairs (non-zero diff < 6)",
+                "error": null,
+                "n_valid_pairs_used": 8
+            },
+            "consistency": {
+                "statistic": null,
+                "p_value": null,
+                "n_pairs": 8,
+                "median_difference": 0.5,
+                "direction": "neutral",
+                "status": "skipped_insufficient_pairs (non-zero diff < 6)",
+                "error": null,
+                "n_valid_pairs_used": 8
+            },
+            "interoperability": {
+                "statistic": null,
+                "p_value": null,
+                "n_pairs": 8,
+                "median_difference": 0.0,
+                "direction": "neutral",
+                "status": "skipped_insufficient_pairs (non-zero diff < 6)",
+                "error": null,
+                "n_valid_pairs_used": 8
+            },
+            "reusability": {
+                "statistic": 0.0,
+                "p_value": 0.015625,
+                "n_pairs": 8,
+                "median_difference": 1.0,
+                "direction": "LLM > Human",
+                "status": "ok",
+                "error": null,
+                "n_valid_pairs_used": 8
+            },
+            "understandability": {
+                "statistic": 0.0,
+                "p_value": 0.0078125,
+                "n_pairs": 8,
+                "median_difference": -2.0,
+                "direction": "LLM < Human",
+                "status": "ok",
+                "error": null,
+                "n_valid_pairs_used": 8
+            }
+        },
+        "summary_metrics": {
+            "non_significant_count": 13,
+            "total_valid_tests": 16,
+            "similarity_percentage": 81.25,
+            "avg_abs_median_diff": 1.1666666666666667,
+            "best_judge_score": 0.8070275724982318
+        }
+    }
+}

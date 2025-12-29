@@ -1,0 +1,218 @@
+- |
+  Hello, you are my very intelligent and helpful assistant today for meticulously evaluating the quality of an RDF Turtle file. This file contains triples intended to represent the substantive content extracted from a research paper.
+
+  **IMPORTANT CONTEXT & INSTRUCTIONS:**
+
+  1.  **Focus on Provided Evidence:** Your evaluation **must be based *solely* on the triples explicitly present in the provided Turtle file.** Do **NOT** assume information about the original paper that isn't represented in the triples. Do **NOT** "fill in the gaps" based on the topic or general knowledge. If the file is minimal or lacks detail, the scores for relevant criteria (like Completeness, Semantic Accuracy depth, Reusability, Understandability) should reflect this lack of evidence directly.
+  2.  **Content Focus (Ignore Metadata):** The triples primarily aim to capture the *substantive content* (problem, method, findings, concepts). You should **ignore the absence of typical metadata** like authorship, publication date, venue, etc., *unless* such metadata is present and incorrectly formatted or used. Do not penalize scores simply because metadata is missing.
+  3.  **Evaluation Criteria:** Evaluate the provided Turtle file against the 8 criteria defined below: `semantic_accuracy`, `syntactic_accuracy`, `conciseness`, `completeness`, `consistency`, `interoperability`, `reusability`, `understandability`.
+  4.  **Scoring:** Assign an integer score from **1 (not fulfilled at all)** to **5 (totally fulfilled)** for each criterion. Be careful, you have to give justification for that. Use the following scale interpretation:
+    *   1 = Not fulfilled at all (Criterion is essentially absent or fundamentally flawed)
+    *   2 = Rather not fulfilled (Significant issues or lack of evidence for the criterion)
+    *   3 = Partly fulfilled / partly not fulfilled (Some aspects met, others missing or flawed; mediocre)
+    *   4 = Mostly fulfilled (Minor issues or minor lack of evidence, but generally good)
+    *   5 = Totally fulfilled (Excellent demonstration of the criterion based on the provided triples)
+  5.  **Justification:** Provide a concise justification for *each* score. Base your justification **strictly on observations from the provided Turtle file** and relate it directly to the indicators defined for that criterion. Mention the primary reason(s) for the score assigned.
+  6.  **Output Format:** Your final output **must** be a single JSON object adhering exactly to the structure shown in the example below, delimited by ### (the numbers are example values and the text is example text):
+  ###
+  Example:
+  {
+  "semantic_accuracy": 2,
+  "syntactic_accuracy": 5,
+  "conciseness": 3,
+  "completeness": 1,
+  "consistency": 2,
+  "interoperability": 2,
+  "reusability": 2,
+  "understandability": 1,
+  "justification": "semantic_accuracy (2): The few RDF triples seem to be semantically accurate. However, the low number of overall triples limits semantic accuracy with respect to a meaningful representation of the paper's content.\nsyntactic_accuracy (5): The Turtle syntax is correct and adheres to the W3C RDF 1.1 Turtle specification without any errors. There are no syntax issues.\nconciseness (3): There are some redundancies in the triple representations, with similar facts being expressed multiple times using slightly different wording, but the key information is not unnecessarily repeated.\ncompleteness (1): Key details from the paper are missing, including the topics and methodology and data, which makes the RDF graph incomplete and less useful. The graph contains just seven triples which clearly leads to a very low score.\nconsistency (2): Terminology is mostly consistent, but there are some minor inconsistencies in the naming of entities and their relationships. Also, using more standard vocabularies like OWL and SKOS could help maintaining consistency.\ninteroperability (2): The graph uses some common vocabulary like dc:title but there is much room for improvement by incorporating more linking to standard vocabularies. Many well-known namespaces and terms from established standards like OWL, SKOS or FOAF are missing.\nreusability (2): The graph makes use of persistent URIs. However, it lacks standardized ontologies and URIs, hindering future reuse. Some of the custom resources lack semantic definitions via standard vocabularies and clear labels (e.g., rdfs:label), leading to a score of 2.\nunderstandability (1): The graph is not understandable for human users because all of the the properties are missing labels. This inevitably leads to a very low score."
+  }
+
+  ###
+  Here are the definitions and indicators for the 8 criteria:
+  semantic_accuracy:
+  This criterion evaluates how well the RDF triples reflect the actual content and intended meaning of the research paper. Since you only have access to the title and abstract, please use them as a rough orientation and rely on your general scientific background knowledge to make an informed judgment. A triple should truthfully represent what is likely stated in the paper without inventing, distorting, or oversimplifying information. You can also assess the local semantic coherence: if related triples about the same topic or entity seem logically consistent, this indicates better semantic accuracy.
+  Indicators include:
+    - Correct representation of entities: Entities used in the triples must make sense in the context of the paper and match the roles they likely play. Irrelevant or made-up entities reduce the score.
+    - Appropriate use of predicates: The relation (predicate) between subject and object should match the type of connection that is plausible based on the research context. Using vague or incorrect predicates weakens the semantic quality.
+    - Faithfulness to context and nuance: The triples must not present hypotheses or limitations as established facts. Consider whether the claims sound too strong or oversimplified.
+    - No unsupported or contradictory statements: Triples must not contain obvious contradictions or invented facts that clearly don’t align with the topic or research area.
+    - Local coherence: Groups of related triples (e.g., all triples about the method or results) must form a meaningful and consistent unit.
+    - Overall representational adequacy: The complete set of triples must collectively convey a plausible and comprehensive impression of the paper’s main topics and content. A sparse or incomplete set of triples inherently limits semantic accuracy (leading to a very low score), as it lacks the coverage and detail needed to reflect the paper’s content meaningfully.
+    - Evidence in Triples: The assessment must be based only on the information explicitly encoded in the provided triples, not inferred from external knowledge of the paper's likely content. If the content can be derived mostly from the title, then this is not sufficient, leading to a score of 1.
+    
+  syntactic_accuracy:
+  This criterion checks whether the RDF triples are written in a technically correct and valid way using the Turtle syntax. The goal is to ensure that the triples follow the formal grammar rules defined in the W3C RDF 1.1 Turtle specification (https://www.w3.org/TR/turtle/#sec-grammar). Even if the content makes sense, broken syntax or structural mistakes would lower the score. Please carefully look for signs of incorrect punctuation, invalid URIs, missing components, or anything else that would break the Turtle format.
+  Indicators include:
+    - Well-formed triples: Every triple must follow the correct structure (subject–predicate–object) and contain no missing parts.
+    - Proper Turtle serialization: Check if the Turtle syntax is correctly used — for example, are prefixes declared and applied properly? Are semicolons and dots placed where they should be?
+    - Valid use of URIs, literals, and blank nodes: Each element must follow RDF rules. For instance, predicates must always be URIs, and literals need proper quotation marks, optional datatype, or language tags.
+    - Correct use of vocabularies: If known vocabularies like FOAF, ORKG, or DC Terms are used, the triples must respect their expected structure (e.g., not using a string where a URI is expected).
+    - No unescaped or illegal characters: Watch out for illegal characters (like unescaped quotes or backslashes) that might make the file unreadable.
+    
+  conciseness:
+  This criterion checks whether the RDF triples express the necessary information in a clear and non-redundant way. Conciseness means that each piece of information appears only once and is not duplicated through slightly different wording or repeated statements. Redundancies make the graph harder to interpret and may confuse both humans and machines, especially when similar triples say the same thing using different terms.
+  Indicators include:
+    - No duplicate or redundant triples: The same information should not be stated multiple times using different but similar wording. Each fact should be expressed once, clearly and completely.
+    - Consistent vocabulary: If multiple terms could be used to express the same thing (e.g., "method" vs. "approach"), the graph must stick to one preferred term to avoid confusion.
+    - Efficient handling of reciprocal relations: Don’t express both directions of a relationship unless it really adds value. For example, either "Paper A uses method B" or "Method B is used by Paper A" is enough unless both are truly needed.
+    
+  completeness:
+  This criterion checks whether the RDF triples contain all the important information about the research publication. A complete graph gives a well-rounded and meaningful picture of the paper’s content, supporting common use cases like understanding, comparing, or analyzing scientific work. Missing key facts or incomplete triples can make the graph less useful and harder to interpret.
+  Indicators include:
+    - Coverage of relevant aspects: The graph must include essential elements like the research problem, the method used, the dataset (if any), and other central facts that help understand the publication.
+    - Fully formed triples: All triples must have a subject, predicate, and object that make sense together. Triples that are only partially filled or contain vague placeholders count as incomplete.
+    - Inclusion of domain-specific properties: Depending on the research area, certain types of information should be present. For example, in software engineering, it’s helpful to include things like the programming language, the type of software developed, or how the work was evaluated.
+    - Support for user needs: The graph must contain enough information to enable users to do useful things with it—like finding similar papers, comparing approaches, or understanding a methodology.
+    - Evidence in Triples: The assessment must be based only on the information explicitly encoded in the provided triples, not inferred from external knowledge of the paper's likely content. If the content can be derived mostly only from the title, then this is not sufficient, leading to a score of 1.
+    - Number of derived sentences: A good indicator for completeness is if you can build several sentences with the given triples and with this capture the idea of the research paper. Graphs containing too less triples for building several sentences about the content receive a very low score for completeness of 1.
+    
+  consistency:
+  This dimension checks whether the RDF triples are logically aligned and follow a uniform structure and terminology throughout the graph. In a consistent SKG, similar research papers are described in similar ways—using the same kinds of predicates, terms, and structures. This makes the graph easier to interpret, compare, and work with, both for humans and machines.
+  Indicators include:
+    - Uniform use of properties: Similar facts (e.g., the method or dataset of a paper) are described using the same property across all entries. Switching between labels like method, approach, and methodology without clear mapping reduces consistency drastically.
+    - Stable terminology: Terms, classes, and relationships are used in a coherent way. If the same concept appears under slightly different names (e.g., two nodes for the same thing), that weakens consistency. Usage of a several different standard ontologies (like DBPedia, Wikidata, or CSO) does not affect consistency.
+    - Structural patterns: Papers of the same type must follow a similar modeling pattern or structure. If the graph varies a lot in how similar publications are represented, this leads to a score of 1 for consistency.
+    - Controlled vocabulary: Adhering to standard, established ontologies and vocabularies (like OWL, SKOS, DCTerms) naturally promotes consistency and helps maintaining consistency while adding new triples to the graph. This leads to a higher consistency score for single papers.
+    
+  interoperability:
+  This dimension checks how well the SKG connects with other datasets, tools, and established semantic web standards. A graph with high interoperability uses shared, standard vocabularies (like OWL for ontology structure, SKOS for concept schemes, and Dublin Core Terms (DCTerms) for metadata), follows standard RDF formats, and reuses existing persistent identifiers—making it easier to link, integrate, query, and reuse across different systems.
+  Indicators include:
+    - Reuse of standard vocabularies: The graph mus actively leverage well-known namespaces and terms from established standards such as OWL (e.g., owl:Class, owl:sameAs), SKOS (e.g., skos:Concept, skos:broader), DCTerms (e.g., dc:title, dc:creator), RDFS (rdfs:label, rdfs:subClassOf), FOAF, FABIO, etc., where appropriate. Absence of standard vocabulary reuse severely limits interoperability and results in a very low score.
+    - Reuse of existing URIs for entities: The graph must link entities (like papers, concepts, methods) to well-known, persistent identifiers (e.g., from Wikidata, DBpedia, CSO). This helps others recognize and reliably reuse the same entities. Using only local/custom URIs without external links significantly lowers the score.
+    - No unnecessary new terms: Instead of inventing new predicates like hasResearchMethod, the SKG reuses existing ones. This avoids confusion and keeps the vocabulary consistent across graphs.
+    - Standard format usage: The graph follows established RDF formats like Turtle or JSON-LD, making it easier for machines to process and exchange.
+    - Alignment with external data models: The graph can be linked to external sources, like DBpedia or citation datasets, because it uses compatible structures and terms.
+    
+  reusability:
+  Reusability measures how easy it is to use the data in the future by machines and external systems. A reusable SKG follows community standards, uses persistent identifiers, and structures data in a way that can be reliably understood and expanded upon by automated systems.
+  Indicators include:
+    - Use of persistent, dereferenceable URIs: Entities in the graph must be identified using stable, accessible identifiers (e.g., Wikidata, DBPedia, CSO) that make future reuse consistent. 
+    - Use of community-recognized vocabularies: Adhering to widely accepted, well-documented ontologies for the properties and classes helps ensuring reusability. This leads to a higher reusability score for single papers.
+    - Machine-readable format: The data must be structured in RDF formats with clearly defined meanings, allowing machines to reuse and process it. This includes providing semantic definitions via standard vocabularies and clear labels (e.g., rdfs:label, skos:prefLabel) for custom resources to aid interpretation by future systems.
+    - No ambiguous or unstructured labels: Instead of free-text descriptions (e.g., "deep learning with CNN"), the SKG links methods to established terms from controlled vocabularies (e.g., CSO, Wikidata).
+    
+  understandability:
+  Understandability refers to how easily the data can be comprehended by human users, ensuring that the information is clear and intuitive without requiring technical expertise. An understandable SKG enables researchers and domain experts to interpret the data effortlessly.
+  Indicators include:
+    - Presence of human-readable labels: All custom resources (URIs representing specific entities, concepts, etc.) must have clear rdfs:label or equivalent standard labels (e.g., skos:prefLabel, dcterms:title). Relying solely on URI fragments or IDs makes the graph difficult to understand and results in a very low score of 1 for understandability.
+    - Intuitive predicate naming: Relations are named in a way that makes their meaning immediately clear, avoiding cryptic or overly technical labels. Absence of labels results in a very low score.
+    - Use of controlled language and terminology: The graph consistently uses domain-specific terms from widely recognized vocabularies, reducing confusion. If mostly custom terminology is used, this leads to a very low score for understandability.
+    - Contextual Clarity: Relationships must be clear from the predicate labels and the context of connected nodes. Ambiguous connections require users to guess the meaning, lowering understandability.
+    - Structural clarity and navigability: The data is organized logically, allowing users to easily follow relationships and concepts without needing to decode complex structures. Understandability does not depend on the number of triples.
+
+  I will now send you the title, abstract, and RDF Turtle file of the research paper. You may use the title and abstract to get a rough idea of the research context. However, please remember that the RDF triples represent the content of the entire research paper, not just the title and abstract. Do not attempt to verify the triples solely based on the title and abstract.
+  Please carefully examine the RDF Turtle content and then provide your evaluation as a JSON object in the given format.
+- |
+  Hello, you are my very intelligent and helpful assistant today for evaluating an RDF Turtle file containing triples about the content of 10 research papers. 
+  **IMPORTANT CONTEXT & INSTRUCTIONS:**
+
+  1.  **Focus on Provided Evidence:** Your evaluation **must be based *solely* on the triples explicitly present in the provided Turtle file.** Do **NOT** assume information about the original paper that isn't represented in the triples. Do **NOT** "fill in the gaps" based on the topic or general knowledge. If the file is minimal or lacks detail, the scores for relevant criteria (like Completeness, Semantic Accuracy depth, Reusability, Understandability) should reflect this lack of evidence directly.
+  2.  **Content Focus (Ignore Metadata):** The triples primarily aim to capture the *substantive content* (problem, method, findings, concepts). You should **ignore the absence of typical metadata** like authorship, publication date, venue, etc., *unless* such metadata is present and incorrectly formatted or used. Do not penalize scores simply because metadata is missing.
+  3.  **Evaluation Criteria:** Evaluate the provided Turtle file against the 8 criteria defined below: `semantic_accuracy`, `syntactic_accuracy`, `conciseness`, `completeness`, `consistency`, `interoperability`, `reusability`, `understandability`.
+  4.  **Scoring:** Assign an integer score from **1 (not fulfilled at all)** to **5 (totally fulfilled)** for each criterion. Be careful, you have to give justification for that. Use the following scale interpretation:
+    *   1 = Not fulfilled at all (Criterion is essentially absent or fundamentally flawed)
+    *   2 = Rather not fulfilled (Significant issues or lack of evidence for the criterion)
+    *   3 = Partly fulfilled / partly not fulfilled (Some aspects met, others missing or flawed; mediocre)
+    *   4 = Mostly fulfilled (Minor issues or minor lack of evidence, but generally good)
+    *   5 = Totally fulfilled (Excellent demonstration of the criterion based on the provided triples)
+  5.  **Justification:** Provide a concise justification for *each* score. Base your justification **strictly on observations from the provided Turtle file** and relate it directly to the indicators defined for that criterion. Mention the primary reason(s) for the score assigned.
+  6.  **Output Format:** Your final output **must** be a single JSON object adhering exactly to the structure shown in the example below, delimited by ### (the numbers are example values and the text is example text):
+  ###
+  Example:
+  {
+  "semantic_accuracy": 2,
+  "syntactic_accuracy": 5,
+  "conciseness": 3,
+  "completeness": 1,
+  "consistency": 2,
+  "interoperability": 2,
+  "reusability": 2,
+  "understandability": 1,
+  "justification": "semantic_accuracy (2): The few RDF triples seem to be semantically accurate. However, the low number of overall triples limits semantic accuracy with respect to a meaningful representation of the contents of the papers.\nsyntactic_accuracy (5): The Turtle syntax is correct and adheres to the W3C RDF 1.1 Turtle specification without any errors. There are no syntax issues.\nconciseness (3): There are some redundancies in the triple representations, with similar facts being expressed multiple times using slightly different wording, but the key information is not unnecessarily repeated.\ncompleteness (1): Key details from the papers are missing, including the topics and methodology and data, which makes the RDF graph incomplete and less useful. The graph contains just 44 triples for eight papers which clearly leads to a very low score.\nconsistency (2): Terminology is mostly consistent, but there are some minor inconsistencies in the naming of entities and their relationships. Also, using more standard vocabularies like OWL and SKOS could help maintaining consistency.\ninteroperability (2): The graph uses some common vocabulary like dc:title but there is much room for improvement by incorporating more linking to standard vocabularies. Many well-known namespaces and terms from established standards like OWL, SKOS or FOAF are missing.\nreusability (2): The graph makes use of persistent URIs. However, it lacks standardized ontologies and URIs, hindering future reuse. Some of the custom resources lack semantic definitions via standard vocabularies and clear labels (e.g., rdfs:label), leading to a score of 2.\nunderstandability (1): The graph is not understandable for human users because all of the the properties are missing labels. This inevitably leads to a very low score."
+  }
+  ###
+  Here are the definitions and indicators for the 8 criteria:
+  semantic_accuracy:
+  This criterion evaluates how well the RDF triples reflect the actual content and intended meaning of the research papers. Since you do not have access to the papers, please rely on your general scientific background knowledge to make an informed judgment. A triple should truthfully represent what is likely stated in the paper without inventing, distorting, or oversimplifying information. You can also assess the local semantic coherence: if related triples about the same topic or entity seem logically consistent, this indicates better semantic accuracy.
+  Indicators include:
+    - Correct representation of entities: Entities used in the triples must make sense in the context of the paper and match the roles they likely play. Irrelevant or made-up entities reduce the score.
+    - Appropriate use of predicates: The relation (predicate) between subject and object must match the type of connection that is plausible based on the research context. Using vague or incorrect predicates weakens the semantic quality.
+    - Faithfulness to context and nuance: The triples must not present hypotheses or limitations as established facts. Consider whether the claims sound too strong or oversimplified.
+    - No unsupported or contradictory statements: Triples must not contain obvious contradictions or invented facts that clearly don’t align with the topic or research area.
+    - Local coherence: Groups of related triples (e.g., all triples about the method or results) must form a meaningful and consistent unit.
+    - Overall representational adequacy: The complete set of triples must collectively convey a plausible and comprehensive impression of the paper’s main topics and content. A sparse or incomplete set of triples inherently limits semantic accuracy, as it lacks the coverage and detail needed to reflect the papers' content meaningfully. A sparse or incomplete set of triples inherently limits semantic accuracy (leading to a very low score), as it lacks the coverage and detail needed to reflect the paper’s content meaningfully.
+    - Evidence in Triples: The assessment must be based only on the information explicitly encoded in the provided triples, not inferred from external knowledge of the paper's likely content. If the content can be derived mostly from the title, then this is not sufficient, leading to a score of 1.
+    
+  syntactic_accuracy:
+  This criterion checks whether the RDF triples are written in a technically correct and valid way using the Turtle syntax. The goal is to ensure that the triples follow the formal grammar rules defined in the W3C RDF 1.1 Turtle specification (https://www.w3.org/TR/turtle/#sec-grammar). Even if the content makes sense, broken syntax or structural mistakes would lower the score. Please carefully look for signs of incorrect punctuation, invalid URIs, missing components, or anything else that would break the Turtle format.
+  Indicators include:
+    - Well-formed triples: Every triple must follow the correct structure (subject–predicate–object) and contain no missing parts.
+    - Proper Turtle serialization: Check if the Turtle syntax is correctly used — for example, are prefixes declared and applied properly? Are semicolons and dots placed where they should be?
+    - Valid use of URIs, literals, and blank nodes: Each element must follow RDF rules. For instance, predicates must always be URIs, and literals need proper quotation marks, optional datatype, or language tags.
+    - Correct use of vocabularies: If known vocabularies like FOAF, ORKG, or DC Terms are used, the triples must respect their expected structure (e.g., not using a string where a URI is expected).
+    - No unescaped or illegal characters: Watch out for illegal characters (like unescaped quotes or backslashes) that might make the file unreadable.
+    
+  conciseness:
+  This criterion checks whether the RDF triples express the necessary information in a clear and non-redundant way. Conciseness means that each piece of information appears only once and is not duplicated through slightly different wording or repeated statements. Redundancies make the graph harder to interpret and may confuse both humans and machines, especially when similar triples say the same thing using different terms.
+  Indicators include:
+    - No duplicate or redundant triples: The same information should not be stated multiple times using different but similar wording. Each fact should be expressed once, clearly and completely.
+    - Consistent vocabulary: If multiple terms could be used to express the same thing (e.g., "method" vs. "approach"), the graph should stick to one preferred term to avoid confusion.
+    - Avoiding repeated values: Identical data like DOIs or titles should not appear more than once for the same entity. Repetition suggests poor data normalization.
+    - Efficient handling of reciprocal relations: Don’t express both directions of a relationship unless it really adds value. For example, either "Paper A uses method B" or "Method B is used by Paper A" is enough unless both are truly needed.
+    
+  completeness:
+  This criterion checks whether the RDF triples contain all the important information about the research publications. A complete graph gives a well-rounded and meaningful picture of the papers' contents, supporting common use cases like understanding, comparing, or analyzing scientific work. Missing key facts or incomplete triples can make the graph less useful and harder to interpret.
+  Indicators include:
+    - Coverage of relevant aspects: The graph must include essential elements like the research problem, the method used, the dataset (if any), and other central facts that help understand the publication.
+    - Fully formed triples: All triples must have a subject, predicate, and object that make sense together. Triples that are only partially filled or contain vague placeholders count as incomplete.
+    - Inclusion of domain-specific properties: Depending on the research area, certain types of information should be present. For example, in software engineering, it’s helpful to include things like the programming language, the type of software developed, or how the work was evaluated.
+    - Support for user needs: The graph must contain enough information to enable users to do useful things with it—like finding similar papers, comparing approaches, or understanding a methodology.
+    - Evidence in Triples: The assessment must be based only on the information explicitly encoded in the provided triples, not inferred from external knowledge of the papers' likely content. If the content can be derived mostly only from the titles, then this is not sufficient, leading to a score of 1.
+    - Number of derived sentences: A good indicator for completeness is if you can build several sentences for each paper with the given triples and with this capture the idea of the research paper. Graphs containing too less triples for building several sentences about the content receive very low scores for completeness.
+    
+  consistency:
+  This dimension checks whether the RDF triples are logically aligned and follow a uniform structure and terminology throughout the graph. In a consistent SKG, similar research papers are described in similar ways - using the same kinds of predicates, terms, and structures. This makes the graph easier to interpret, compare, and work with, both for humans and machines.
+  Indicators include:
+    - Uniform use of properties: Similar facts (e.g., the method or dataset of a paper) are described using the same property across all entries. Switching between labels like method, approach, and methodology without clear mapping reduces consistency.
+    - Stable terminology: Terms, classes, and relationships are used in a coherent way. If the same concept appears under slightly different names (e.g., two nodes for the same thing), that weakens consistency.
+    - Structural patterns: Papers of the same type must follow a similar modeling pattern or structure. If the graph varies a lot in how similar publications are represented, this leads to a score of 1 for consistency.
+    - Controlled vocabulary: Adhering to standard, established ontologies and vocabularies (like OWL, SKOS, DCTerms) naturally promotes consistency and helps maintaining consistency while adding new triples to the graph. This leads to a higher consistency score for single papers.
+    
+  interoperability:
+  This dimension checks how well the SKG connects with other datasets, tools, and established semantic web standards. A graph with high interoperability uses shared, standard vocabularies (like OWL for ontology structure, SKOS for concept schemes, and Dublin Core Terms (DCTerms) for metadata), follows standard RDF formats, and reuses existing persistent identifiers—making it easier to link, integrate, query, and reuse across different systems.
+  Indicators include:
+    - Reuse of standard vocabularies: The graph mus actively leverage well-known namespaces and terms from established standards such as OWL (e.g., owl:Class, owl:sameAs), SKOS (e.g., skos:Concept, skos:broader), DCTerms (e.g., dcterms:title, dcterms:creator), RDFS (rdfs:label, rdfs:subClassOf), FOAF, PROV-O, etc., where appropriate. Absence of standard vocabulary reuse severely limits interoperability and results in a very low score.
+    - Reuse of existing URIs for entities: The graph must link entities (like papers, concepts, methods) to well-known, persistent identifiers (e.g., from Wikidata, DBpedia, CSO). This helps others recognize and reliably reuse the same entities. Using only local/custom URIs without external links significantly lowers the score.
+    - No unnecessary new terms: Instead of inventing new predicates like hasResearchMethod, the SKG reuses existing ones. This avoids confusion and keeps the vocabulary consistent across graphs.
+    - Standard format usage: The graph follows established RDF formats like Turtle or JSON-LD, making it easier for machines to process and exchange.
+    - Alignment with external data models: The graph can be linked to external sources, like DBpedia or citation datasets, because it uses compatible structures and terms.
+    
+  reusability:
+  Reusability measures how easy it is to use the data in the future by machines and external systems. A reusable SKG follows community standards, uses persistent identifiers, and structures data in a way that can be reliably understood and expanded upon by automated systems.
+  Indicators include:
+    - Use of persistent, dereferenceable URIs: Entities in the graph are identified using stable, accessible identifiers (e.g., Wikidata, DBPedia, CSO) that make future reuse consistent. 
+    - Use of community-recognized vocabularies: Adhering to widely accepted, well-documented ontologies for the properties and classes helps ensuring reusability. This leads to a higher reusability score for single papers. 
+    - Machine-readable format: The data is structured in RDF formats with clearly defined meanings, allowing machines to reuse and process it. This includes providing semantic definitions via standard vocabularies and clear labels (e.g., rdfs:label, skos:prefLabel) for custom resources to aid interpretation by future systems. If these important indicators for machine-readability are not given, this results in a very low score of 1.
+    - No ambiguous or unstructured labels: Instead of free-text descriptions (e.g., "deep learning with CNN"), the SKG links methods to established terms from controlled vocabularies (e.g., CSO, Wikidata).
+    
+  understandability:
+  Understandability refers to how easily the data can be comprehended by human users, ensuring that the information is clear and intuitive without requiring technical expertise. An understandable SKG enables researchers and domain experts to interpret the data effortlessly.
+  Indicators include:
+    - Presence of human-readable labels: All custom resources (URIs representing specific entities, concepts, etc.) must have clear rdfs:label or equivalent standard labels (e.g., skos:prefLabel, dcterms:title). Relying solely on URI fragments or IDs makes the graph difficult to understand and results in a very low score of 1 for understandability.
+    - Intuitive predicate naming: Relations are named in a way that makes their meaning immediately clear, avoiding cryptic or overly technical labels. Absence of labels results in a very low score.
+    - Use of controlled language and terminology: The graph consistently uses domain-specific terms from widely recognized vocabularies, reducing confusion. If mostly custom terminology is used, this leads to a very low score for understandability.
+    - Contextual Clarity: Relationships must be clear from the predicate labels and the context of connected nodes. Ambiguous connections require users to guess the meaning, lowering understandability.
+    - Structural clarity and navigability: The data is organized logically, allowing users to easily follow relationships and concepts without needing to decode complex structures. Understandability does not depend on the number of triples.
+
+  I will now send you the RDF Turtle file referring to the content of 10 research papers. Please carefully examine the whole file and then provide your evaluation as a JSON object in the given format.
+- |
+  Hello, you are my very intelligent and helpful assistant today. I just received an answer by another LLM agent that does not seem to be correct. The LLM agent had been instructed to respond with a JSON object followed by a justification text. However, my script cannot find any JSON object brackets like { and } in the response. Could you please check the response that you can find together with the original task after the delimiter ### and correct the response. Please respond only with the correct JSON object. Here is the original task and the response by the other LLM:
+  ###
+- |
+  Hello, you are my very intelligent and helpful assistant today. I have just received a response from another LLM agent that appears to be incorrect. The agent was instructed to reply with a JSON object in a strictly defined format, following clear instructions regarding both structure and content.
+  According to my script's parsing, the response does not fully adhere to these instructions. It is especially important that all required keys are present in the JSON object, and all values are integers between 1 and 5 (inclusive).
+  Could you please review the response, which is included after the delimiter ###, along with the original task? Then, correct the response accordingly.
+  Please reply only with the corrected JSON object in the proper format.
+  Here is the original task and the LLM’s response:
+  ###
