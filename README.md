@@ -135,4 +135,6 @@ CC BY-SA 4.0
 
 ## Acknowledgment
 
-The authors gratefully acknowledge Nechakhin, D'Souza, and Eger for publishing the dataset, prompts, and experimental setup. This made it possible to replicate, understand, and build upon their study. We hope that through our ideas and findings presented in this paper, as well as our publicly available program code, prompts, and result files on GitHub, we can give something back to Nechakhin, D'Souza and Eger, and to their project.
+The authors gratefully acknowledge Nechakhin, D'Souza, and Eger for publishing the dataset, prompts, and experimental setup. This made it possible to replicate, understand, and build upon their study.
+
+This work is supported by the European Union’s HORIZON Research and Innovation Programme under grant agreement No 101120657, project ENFIELD (European Lighthouse to Manifest Trustworthy and Green AI).
